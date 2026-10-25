@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work board · kanokchan.dev</title>
+<meta name="description" content="ไฟล์งาน รูปภาพ และรายละเอียดผลงานของ Kanokchan">
+<meta name="theme-color" content="#060910">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='3' width='58' height='58' rx='16' fill='%23060910' stroke='%2345d8ff' stroke-width='5'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23fff'%3EKC%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/app/app.css">
+</head>
+<body>
+<header class="bar"><div class="wrap"><div class="bar-shell">
+  <a class="logo" href="/">kanokchan<b>.dev</b></a>
+  <nav class="links">
+    <a href="/">Home</a><a href="/project" class="on">Work</a>
+  </nav>
+</div></div></header>
+
+<main class="wrap">
+  <div class="head">
+    <span class="kicker">Work board</span>
+    <h1>ไฟล์งาน &amp; ผลงาน</h1>
+    <p id="intro">อัปโหลดไฟล์งาน รูปภาพ เขียนรายละเอียด ตั้งกำหนดส่ง — งานที่เปิดแจ้งเตือนจะเด้งบนหน้าแรกว่า "อย่าลืมทำงานนี้นะ"</p>
+    <p class="muted small">ข้อมูลเก็บไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น คนอื่นมองไม่เห็น · กด "สำรองข้อมูล" เก็บไว้เป็นระยะ เพื่อย้ายเครื่องหรือกันข้อมูลหาย</p>
+  </div>
+
+  <div class="row" id="controls">
+    <div class="seg" id="filter">
+      <button type="button" class="on" data-f="all">ทั้งหมด</button>
+      <button type="button" data-f="todo">ต้องทำ</button>
+      <button type="button" data-f="doing">กำลังทำ</button>
+      <button type="button" data-f="done">เสร็จแล้ว</button>
+    </div>
+    <span class="spacer"></span>
+    <button class="btn sm" id="btn-export" type="button" title="ดาวน์โหลดงานและไฟล์ทั้งหมดเป็นไฟล์เดียว">⤓ สำรองข้อมูล</button>
+    <label class="btn sm" title="นำไฟล์สำรองกลับมา">⤒ กู้คืน<input type="file" id="import-input" accept=".json,application/json" hidden></label>
+    <button class="btn primary" id="btn-new" type="button">+ เพิ่มงานใหม่</button>
+  </div>
+  <br>
+  <div class="board" id="board"></div>
+  <div class="empty" id="empty" hidden></div>
+</main>
+
+<!-- create / edit -->
+<dialog id="editor">
+  <form method="dialog" id="editor-form">
+    <h2 id="editor-title">เพิ่มงานใหม่</h2>
+    <div class="fields">
+      <label class="full">ชื่องาน *<input name="title" required maxlength="200"></label>
+      <label class="full">รายละเอียด<textarea name="description" maxlength="10000" rows="5"></textarea></label>
+      <label>สถานะ
+        <select name="status"><option value="todo">ต้องทำ</option><option value="doing">กำลังทำ</option><option value="done">เสร็จแล้ว</option></select>
+      </label>
+      <label>กำหนดส่ง<input name="due" type="date"></label>
+      <label class="check full"><input type="checkbox" name="remind" checked> แจ้งเตือน "อย่าลืมทำงานนี้นะ" บนหน้าแรก</label>
+      <div class="full grid">
+        <label class="drop" id="drop">
+          <input type="file" name="files" multiple id="file-input">
+          <b>ลากไฟล์มาวาง หรือคลิกเพื่อเลือก</b>
+          <span>รูปภาพ วิดีโอ PDF หรือไฟล์งานใดก็ได้ · สูงสุด 200 MB ต่อไฟล์</span>
+        </label>
+        <ul class="files" id="pending"></ul>
+        <div class="progress" id="progress" hidden><i></i></div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn danger" type="button" id="btn-delete" hidden>ลบงานนี้</button>
+      <span class="spacer"></span>
+      <button class="btn" value="cancel" formnovalidate>ยกเลิก</button>
+      <button class="btn primary" type="submit" id="btn-save" value="save">บันทึก</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="lightbox" class="lightbox">
+  <div id="lb-media"></div>
+  <div class="cap"><span id="lb-name"></span><a class="btn sm" id="lb-open" target="_blank" rel="noopener">เปิด</a><button class="btn sm" type="button" id="lb-close">ปิด</button></div>
+</dialog>
+
+<script src="/assets/app/common.js"></script>
+<script src="/assets/app/store.js"></script>
+<script src="/assets/app/project.js"></script>
+</body>
+</html>
