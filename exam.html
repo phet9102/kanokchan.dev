@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exam · kanokchan.dev</title>
+<meta name="description" content="คลังโจทย์ฝึกสอบ TCAS ที่สร้างใหม่ทุกครั้ง — คณิตศาสตร์ประยุกต์ 1, ฟิสิกส์ A-Level, TPAT3 และ TGAT พร้อมเฉลยละเอียดและรูปประกอบ">
+<meta name="theme-color" content="#060910">
+<link rel="canonical" href="https://kanokchan.pages.dev/exam">
+<meta property="og:title" content="Exam · kanokchan.dev">
+<meta property="og:description" content="สุ่มโจทย์แนว A-Level คณิต ฟิสิกส์ TPAT3 TGAT ได้ไม่จำกัด พร้อมเฉลยและรูปประกอบ">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='3' width='58' height='58' rx='16' fill='%23060910' stroke='%2345d8ff' stroke-width='5'/%3E%3Cpath d='M18 34l9 9 19-21' fill='none' stroke='%23ffb547' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/app/app.css">
+<link rel="stylesheet" href="/assets/exam/katex/katex.min.css">
+<link rel="stylesheet" href="/assets/exam/exam.css">
+</head>
+<body>
+<header class="bar"><div class="wrap"><div class="bar-shell">
+  <a class="logo" href="/">kanokchan<b>.dev</b></a>
+  <nav class="links">
+    <a href="/">Home</a><a href="/project">Work</a><a href="/exam" class="on">Exam</a><a href="/english">Eng</a>
+  </nav>
+</div></div></header>
+
+<main class="wrap">
+  <div class="head">
+    <span class="kicker">Exam generator</span>
+    <h1>คลังโจทย์ฝึกสอบ TCAS</h1>
+    <p>โจทย์ทุกข้อถูกสร้างขึ้นใหม่ด้วยตัวเลขและเงื่อนไขที่สุ่มทุกครั้ง ตามแนวข้อสอบ A-Level คณิตศาสตร์ประยุกต์ 1, A-Level ฟิสิกส์, TPAT3 และ TGAT — ทุกข้อมีเฉลยแบบแสดงวิธีทำ และหลายข้อมีรูปประกอบที่วาดขึ้นจากตัวเลขของข้อนั้นเอง</p>
+  </div>
+
+  <section class="subjects" id="subjects" role="radiogroup" aria-label="เลือกวิชา"></section>
+
+  <section class="controls card" aria-label="ตั้งค่า">
+    <div class="seg" id="mode" role="tablist" aria-label="โหมด">
+      <button type="button" data-v="practice" class="on" role="tab" aria-selected="true">ฝึกทีละข้อ</button>
+      <button type="button" data-v="exam" role="tab" aria-selected="false">จำลองสอบ</button>
+    </div>
+    <label class="ctl">หัวข้อ
+      <select id="topic"></select>
+    </label>
+    <label class="ctl exam-only" hidden>จำนวนข้อ
+      <select id="count"><option>10</option><option selected>15</option><option>20</option><option>25</option><option>30</option></select>
+    </label>
+    <label class="check exam-only" hidden><input type="checkbox" id="timed" checked> จับเวลา</label>
+    <span class="spacer"></span>
+    <div class="stat" id="stat" aria-live="polite"></div>
+  </section>
+
+  <!-- practice: one question at a time -->
+  <section id="practice" class="practice">
+    <div id="pq"></div>
+    <div class="row p-actions">
+      <button class="btn" type="button" id="btn-reveal">ดูเฉลย</button>
+      <button class="btn" type="button" id="btn-same" title="ข้อแนวเดิม แต่ตัวเลขใหม่">↻ แนวเดิม ตัวเลขใหม่</button>
+      <span class="spacer"></span>
+      <button class="btn primary" type="button" id="btn-next">ข้อถัดไป →</button>
+    </div>
+    <p class="hint muted small">คีย์ลัด: กด 1–5 เพื่อตอบ · Enter หรือ → เพื่อไปข้อถัดไป</p>
+  </section>
+
+  <!-- exam: a full paper -->
+  <section id="exam" class="exam" hidden>
+    <div class="paper-bar" id="paper-bar">
+      <div class="pb-l">
+        <b id="paper-title">ชุดข้อสอบ</b>
+        <span class="muted small mono" id="paper-code"></span>
+      </div>
+      <div class="pb-r">
+        <span class="timer mono" id="timer" hidden></span>
+        <span class="muted small" id="answered"></span>
+        <button class="btn sm" type="button" id="btn-new">สุ่มชุดใหม่</button>
+        <button class="btn sm" type="button" id="btn-print">พิมพ์</button>
+        <button class="btn sm primary" type="button" id="btn-submit">ส่งคำตอบ</button>
+      </div>
+    </div>
+    <div class="result card" id="result" hidden></div>
+    <ol class="sheet" id="sheet" aria-label="ตารางคำตอบ"></ol>
+    <div id="paper"></div>
+    <div class="row end">
+      <span class="spacer"></span>
+      <button class="btn primary" type="button" id="btn-submit2">ส่งคำตอบ</button>
+    </div>
+  </section>
+
+  <p class="foot-note muted small">โจทย์แต่งขึ้นใหม่ทั้งหมดโดยอิงรูปแบบและระดับความยากของข้อสอบจริงปี 2566–2569 ไม่ได้คัดลอกข้อสอบจริง · ค่าคงตัวที่ใช้ระบุไว้ในแต่ละข้อ · ความคืบหน้าเก็บไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น · เรนเดอร์สมการด้วย <a href="https://katex.org" target="_blank" rel="noopener">KaTeX</a> (MIT)</p>
+</main>
+
+<dialog id="print-dlg">
+  <form method="dialog">
+    <h2>พิมพ์ชุดข้อสอบ</h2>
+    <label class="check"><input type="checkbox" id="print-sol" checked> พิมพ์เฉลยใต้แต่ละข้อ</label>
+    <label class="check"><input type="checkbox" id="print-mark"> แสดงคำตอบที่เลือกไว้</label>
+    <div class="row"><span class="spacer"></span><button class="btn" value="cancel">ยกเลิก</button><button class="btn primary" value="print">พิมพ์</button></div>
+  </form>
+</dialog>
+
+<script src="/assets/exam/katex/katex.min.js"></script>
+<script src="/assets/exam/core.js"></script>
+<script src="/assets/exam/bank-math.js"></script>
+<script src="/assets/exam/bank-phys.js"></script>
+<script src="/assets/exam/bank-tpat3.js"></script>
+<script src="/assets/exam/bank-tgat.js"></script>
+<script src="/assets/exam/exam.js"></script>
+</body>
+</html>

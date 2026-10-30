@@ -19,6 +19,14 @@
   X-Frame-Options: DENY
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://api.dictionaryapi.dev; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
 
+/exam
+  Permissions-Policy: microphone=()
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+
+/assets/exam/katex/*
+  Cache-Control: public, max-age=2592000
+
 /assets/english/words.json
   Cache-Control: public, max-age=604800
 
