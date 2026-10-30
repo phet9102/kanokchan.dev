@@ -25,7 +25,19 @@
 <meta name="description" content="Kanokchan — Software & Electrical Engineer. Bio link, projects and contact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<!-- Low-spec ("lite") mode is decided before the first paint, so heavy blur effects never start on slow computers.
+     Force it with ?lite=1 / ?lite=0 (remembered) or the button in the footer. The full check runs again in the main script. -->
+<script>
+try { var f = localStorage.getItem("kc-lite"), q = /[?&]lite=([01])/.exec(location.search), n = navigator;
+  if (q) f = q[1];
+  var g = JSON.parse(localStorage.getItem("kc-gpu") || "{}");
+  if (f ? f === "1" : (g.soft || (n.deviceMemory || 8) <= 4 || (n.hardwareConcurrency || 8) <= 4 || (n.connection && n.connection.saveData)))
+    document.documentElement.classList.add("lite");
+} catch (e) {}
+</script>
 
 <style>
 /* =====================================================================
@@ -603,7 +615,41 @@ html.is-loading { overflow: hidden; }
 .portal-copy p { margin: 0; color: #c6cfdd; font-size: 17px; max-width: 28em; }
 .portal-copy .kicker { justify-self: start; }
 .portal.no-gl .tablet { visibility: visible; border-radius: 34px; background: linear-gradient(145deg, #2a3040, #0d1118); }
-.portal.no-gl .tablet-screen { background: radial-gradient(circle at 50% 50%, #1b3550, #04060b 70%); }
+.portal.no-gl .tablet-screen { background: #04060b url(assets/planet.webp) center / cover; }
+.portal.no-gl .tablet { will-change: transform; transform-origin: 50% 50%; }
+
+/* CSS stand-in for the 3D portal (no graphics chip, or shaders still compiling): flying tunnel frames per world */
+.portal-css { position: absolute; inset: 0; z-index: 1; display: none; overflow: hidden; pointer-events: none;
+  --pc-c: #45d8ff; --pc-a: #04060b;
+  background: radial-gradient(110% 85% at 50% 50%, var(--pc-a) 0%, #04060b 66%); }
+.portal.no-gl .portal-css { display: block; }
+.portal-css[data-w="0"] { --pc-c: #45d8ff; --pc-a: #0b2c48; }
+.portal-css[data-w="1"] { --pc-c: #3dff8a; --pc-a: #07291a; }
+.portal-css[data-w="2"] { --pc-c: #ff4fa3; --pc-a: #33081f; }
+.portal-css[data-w="3"] { --pc-c: #ffffff; --pc-a: #2d5be0; }
+.pc-sky { position: absolute; inset: -4%; background: #04060b url(assets/nebula.webp) center / cover; opacity: 0; transition: opacity .9s;
+  animation: pcDrift 40s linear infinite alternate; }
+.portal-css[data-w="4"] .pc-sky { opacity: 1; }
+.pc-tunnel { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; transition: opacity .6s; }
+.portal-css[data-w="0"] .pc-tunnel, .portal-css[data-w="1"] .pc-tunnel,
+.portal-css[data-w="2"] .pc-tunnel, .portal-css[data-w="3"] .pc-tunnel { opacity: 1; }
+.portal-css[data-w="2"] .pc-tunnel { animation: pcTwist 9s linear infinite; }
+.pc-tunnel i { position: absolute; width: 46vmin; height: 34vmin; border: 2px solid var(--pc-c); border-radius: 12px; opacity: 0;
+  box-shadow: 0 0 16px var(--pc-c), inset 0 0 16px var(--pc-c); animation: pcFly 3.5s cubic-bezier(.6, 0, 1, .5) infinite; }
+.pc-tunnel i:nth-child(2) { animation-delay: -.5s; } .pc-tunnel i:nth-child(3) { animation-delay: -1s; }
+.pc-tunnel i:nth-child(4) { animation-delay: -1.5s; } .pc-tunnel i:nth-child(5) { animation-delay: -2s; }
+.pc-tunnel i:nth-child(6) { animation-delay: -2.5s; } .pc-tunnel i:nth-child(7) { animation-delay: -3s; }
+.pc-ring { position: absolute; left: 50%; top: 50%; width: 70vmin; aspect-ratio: 1; margin: -35vmin 0 0 -35vmin; border-radius: 50%; opacity: 0;
+  background: conic-gradient(#ff3b5c, #ffb547, #b7ff5a, #45d8ff, #6a5bff, #ff4fd8, #ff3b5c);
+  -webkit-mask: radial-gradient(farthest-side, transparent 84%, #000 90%, #000 94%, transparent 100%);
+          mask: radial-gradient(farthest-side, transparent 84%, #000 90%, #000 94%, transparent 100%);
+  transition: opacity .8s; animation: pcSpin 10s linear infinite; }
+.portal-css[data-w="5"] .pc-ring { opacity: .9; }
+@keyframes pcFly { 0% { transform: scale(.03); opacity: 0; } 20% { opacity: 1; } 100% { transform: scale(4.5); opacity: 0; } }
+@keyframes pcSpin { to { transform: rotate(1turn); } }
+@keyframes pcTwist { to { transform: rotate(1turn); } }
+@keyframes pcDrift { from { transform: scale(1); } to { transform: scale(1.08) translateX(-2%); } }
+@media (prefers-reduced-motion: reduce) { .pc-tunnel i, .pc-ring, .pc-sky, .portal-css .pc-tunnel { animation: none !important; } .pc-tunnel i { opacity: .5; transform: scale(calc(var(--i, 1))); } }
 .portal-end { position: absolute; z-index: 6; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center; opacity: 0; pointer-events: none;
   display: grid; justify-items: center; gap: 18px;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
@@ -704,6 +750,28 @@ html.is-loading { overflow: hidden; }
   .float, .media-card, .status .led, .typing .caret { animation: none !important; }
   * { transition-duration: .01ms !important; }
 }
+
+/* =====================================================================
+   15. Lite mode (low-spec computers) — set on <html class="lite">.
+   Background blur is the most expensive thing for weak graphics chips,
+   so it is swapped for slightly more solid glass. Everything still looks the same.
+   ===================================================================== */
+html.lite *, html.lite *::before, html.lite *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+html.lite .glass { background: linear-gradient(180deg, rgba(22,29,43,.86), rgba(12,17,27,.86)); }
+html.lite #about .glass, html.lite #message .glass, html.lite #projects .glass { background: linear-gradient(160deg, rgba(30,38,56,.80), rgba(12,17,27,.78) 60%); }
+html.lite .nav-shell, html.lite .dock, html.lite .lang-panel { background: rgba(8,12,20,.94); }
+html.lite .sticker { filter: drop-shadow(0 8px 12px rgba(0,0,0,.45)); }
+html.lite .glass::before { display: none; }
+html.lite .float { animation: none !important; }
+
+button.to-top { background: transparent; cursor: pointer; }
+.perf-toast { position: fixed; z-index: 80; left: 50%; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); translate: -50% 0;
+  display: flex; gap: 12px; align-items: center; width: max-content; max-width: calc(100vw - 32px); padding: 10px 10px 10px 16px;
+  border-radius: 999px; border: 1px solid var(--line-hi); background: rgba(8,12,20,.95); color: var(--text);
+  font: 400 13px/1.35 var(--f-body, inherit); box-shadow: 0 14px 40px rgba(0,0,0,.5); animation: remindIn .45s cubic-bezier(.2,.8,.2,1); }
+.perf-toast button { flex: none; border: 1px solid var(--line-hi); background: transparent; color: var(--cyan); border-radius: 999px;
+  padding: 7px 12px; font: 500 12px/1 var(--f-mono); cursor: pointer; }
+.perf-toast button:hover { border-color: var(--cyan); }
 </style>
 </head>
 <body>
@@ -730,6 +798,11 @@ html.is-loading { overflow: hidden; }
           <a class="page-link" href="/project" title="Work board — ไฟล์งานและรูปภาพ">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M9 20V9"/></svg>
             <span>Work</span>
+          </a>
+          <!-- Link to the English flash-card page (/english) -->
+          <a class="page-link" href="/english" title="ฝึกคำศัพท์อังกฤษ — การ์ด 3D 5,000 คำ">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="13" height="17" rx="2.5" transform="rotate(8 13.5 11.5)"/><rect x="3.5" y="4.5" width="13" height="17" rx="2.5"/><path d="M7.5 15.5 10 9l2.5 6.5M8.4 13.2h3.2"/></svg>
+            <span>Eng</span>
           </a>
           <!-- Language switcher button -->
           <button class="lang-toggle notranslate" id="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
@@ -823,6 +896,8 @@ html.is-loading { overflow: hidden; }
   <section class="portal" id="portal" aria-label="Portal">
     <div class="portal-stage" id="portal-stage">
       <canvas id="tunnel" aria-hidden="true"></canvas>
+      <!-- light CSS version of the scene: used on computers without a real graphics chip, and while the 3D shaders compile -->
+      <div class="portal-css" id="portal-css" aria-hidden="true" data-w="-1"><div class="pc-sky"></div><div class="pc-tunnel"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="pc-ring"></div></div>
       <div class="portal-ui">
         <div class="tablet" id="tablet"><div class="tablet-screen"></div></div>
         <div class="portal-copy" id="portal-copy">
@@ -982,6 +1057,8 @@ html.is-loading { overflow: hidden; }
       <span>© <span id="year">2026</span> Kanokchan · kanokchan.dev</span>
       <div class="foot-links">
         <a class="to-top" href="/project">Work board</a>
+        <a class="to-top" href="/english">English cards</a>
+        <button class="to-top" id="perf-toggle" type="button"></button>
         <a class="to-top" href="#home"><span data-i18n="foot.top">กลับขึ้นด้านบน</span> ↑</a>
       </div>
     </div>
@@ -1014,23 +1091,37 @@ html.is-loading { overflow: hidden; }
 <script type="module">
 /* =====================================================================
    MODULE: 3D Lab — real-time objects with three.js (aims for 60 FPS)
+   three.js (~1 MB) is only downloaded when the Lab is about to scroll into
+   view, so it never slows down the first load. Lite mode: lighter materials,
+   1x resolution and ~30 FPS.
    ===================================================================== */
-import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
-
 const cv = document.getElementById("lab-canvas");
 if (cv) {
+  const stage = cv.parentElement, status = document.getElementById("lab-status");
+  let started = false;
+  const start = () => { if (started) return; started = true; status.textContent = "Loading 3D…"; initLab().catch(e => { console.warn("lab", e); status.textContent = "3D unavailable"; }); };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { io.disconnect(); start(); } }, { rootMargin: "600px 0px" });
+    io.observe(stage);
+  } else start();
+}
+
+async function initLab() {
+  const [THREE, { GLTFLoader }, { OrbitControls }, { RoomEnvironment }] = await Promise.all([
+    import("three"), import("three/addons/loaders/GLTFLoader.js"),
+    import("three/addons/controls/OrbitControls.js"), import("three/addons/environments/RoomEnvironment.js")]);
+  const LITE = () => window.PERF && PERF.lite;
   const stage = cv.parentElement, status = document.getElementById("lab-status"), credit = document.getElementById("lab-credit");
+  status.textContent = "";
   const fpsEl = document.getElementById("lab-fps"), list = document.getElementById("lab-models");
-  const renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true, powerPreference: "high-performance" });
-  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  const renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: !LITE(), alpha: true, powerPreference: "high-performance" });
+  renderer.setPixelRatio(LITE() ? 1 : Math.min(devicePixelRatio || 1, 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
   const scene = new THREE.Scene();
   const pmrem = new THREE.PMREMGenerator(renderer);
   scene.environment = pmrem.fromScene(new RoomEnvironment(renderer), 0.04).texture;
+  pmrem.dispose();
   const camera = new THREE.PerspectiveCamera(35, 1, 0.05, 100); camera.position.set(0, 0.35, 5.2);
   const controls = new OrbitControls(camera, cv);
   controls.enableDamping = true; controls.dampingFactor = 0.08; controls.enableZoom = false; controls.enablePan = false;
@@ -1074,9 +1165,12 @@ if (cv) {
     return g;
   }
   function makeKnot() {
-    const m = new THREE.MeshPhysicalMaterial({ color: 0xffffff, metalness: 0, roughness: 0.05, transmission: 1, thickness: 0.6, ior: 1.45,
-      iridescence: 1, iridescenceIOR: 1.3, iridescenceThicknessRange: [200, 800], clearcoat: 1 });
-    return new THREE.Mesh(new THREE.TorusKnotGeometry(0.75, 0.26, 260, 40), m);
+    // glass (transmission) needs an extra render pass every frame: lite mode uses polished iridescent metal instead
+    const m = LITE()
+      ? new THREE.MeshPhysicalMaterial({ color: 0xbfe9ff, metalness: 0.9, roughness: 0.18, iridescence: 1, iridescenceIOR: 1.3, iridescenceThicknessRange: [200, 800] })
+      : new THREE.MeshPhysicalMaterial({ color: 0xffffff, metalness: 0, roughness: 0.05, transmission: 1, thickness: 0.6, ior: 1.45,
+          iridescence: 1, iridescenceIOR: 1.3, iridescenceThicknessRange: [200, 800], clearcoat: 1 });
+    return new THREE.Mesh(LITE() ? new THREE.TorusKnotGeometry(0.75, 0.26, 140, 22) : new THREE.TorusKnotGeometry(0.75, 0.26, 260, 40), m);
   }
 
   // fit any model into a ~2.4 unit box, centred
@@ -1118,8 +1212,10 @@ if (cv) {
   resize(); addEventListener("resize", resize);
 
   // render loop (only while visible) + FPS meter
-  const clock = new THREE.Clock(); let frames = 0, acc = 0;
+  const clock = new THREE.Clock(); let frames = 0, acc = 0, skip = 0;
+  if (window.PERF) PERF.onLite(() => renderer.setPixelRatio(1));
   function tick() {
+    if (LITE() && (skip ^= 1)) return;            // lite: draw every other frame (~30 FPS)
     const dt = clock.getDelta(), t = clock.elapsedTime;
     holder.position.y = Math.sin(t * 1.2) * 0.06;
     shadow.material.opacity = 0.8 - holder.position.y * 2;
@@ -1246,7 +1342,7 @@ const I18N = {
     "p3.desc": "Assesses how street flooding affects traffic, with a real-time rain radar map and its own Maps API.",
     "contact.h2": "Let's talk", "contact.h3": "Have a job, a project, or just want to chat? Message me anytime.",
     "contact.p": "I'm interested in software and electrical roles, internships, and building tools for social good.",
-    "contact.cta": "Say hello", "k.lab": "3D Lab", "lab.h2": "3D objects you can spin", "lab.p": "Rendered live with WebGL. Drag to look around.", "lab.drag": "Drag to rotate", "k.portal": "Portal", "portal.h2": "Enter my world", "portal.p": "I don't want to build things that look like everyone else's. I want to make things people remember, from tiny electrical signals to the screen you're looking at. Keep scrolling to travel inside.", "portal.end": "Let's build something together!", "portal.words": "Enter my world where imagination has no limits", "portal.keep": "Keep scrolling to know me better", "portal.skip": "Skip", "hero.scroll": "Scroll to explore", "foot.top": "Back to top", "cursor.open": "Open",
+    "contact.cta": "Say hello", "k.lab": "3D Lab", "lab.h2": "3D objects you can spin", "lab.p": "Rendered live with WebGL. Drag to look around.", "lab.drag": "Drag to rotate", "k.portal": "Portal", "portal.h2": "Enter my world", "portal.p": "I don't want to build things that look like everyone else's. I want to make things people remember, from tiny electrical signals to the screen you're looking at. Keep scrolling to travel inside.", "portal.end": "Let's build something together!", "portal.words": "Enter my world where imagination has no limits", "portal.keep": "Keep scrolling to know me better", "portal.skip": "Skip", "hero.scroll": "Scroll to explore", "foot.top": "Back to top", "cursor.open": "Open", "perf.toLite": "⚡ Lite mode (low-spec)", "perf.toFull": "✨ Full effects", "perf.auto": "⚡ Switched to lite mode automatically — this device can't keep up with full effects", "perf.full": "Use full effects",
     copy: "Copy", copied: "Copied ✓",
     "lang.instant": "Instant", "lang.more": "More languages", "lang.loading": "Loading 100+ more languages…",
     "lang.failed": "100+ more languages work on the live site (kanokchan.dev)",
@@ -1451,6 +1547,117 @@ const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const FINE_POINTER = window.matchMedia("(pointer: fine)").matches;
 
 /* =====================================================================
+   PERFORMANCE TIER — "full" or "lite" (low-spec computers / phones)
+   lite = software graphics (no real GPU), ≤4 GB RAM, ≤4 CPU threads or Data Saver.
+   Also switches to lite by itself if the page runs below ~24 FPS for a few seconds.
+   Force it with ?lite=1 or ?lite=0 (remembered in this browser) or the footer button.
+   ===================================================================== */
+const PERF = window.PERF = (() => {
+  let forced = null;
+  try {
+    const q = new URLSearchParams(location.search).get("lite");
+    if (q === "1" || q === "0") localStorage.setItem("kc-lite", q);
+    forced = localStorage.getItem("kc-lite");
+  } catch (e) {}
+  const mem = navigator.deviceMemory || 8, cores = navigator.hardwareConcurrency || 8;
+  const saveData = !!(navigator.connection && navigator.connection.saveData);
+  let cached = null;
+  try { cached = JSON.parse(localStorage.getItem("kc-gpu") || "null"); } catch (e) {}
+  if (cached && cached.ua !== navigator.userAgent) cached = null;
+  const quick = saveData || mem <= 4 || cores <= 4;
+  const P = { forced, gpu: cached ? cached.gpu : "", soft: !!(cached && cached.soft) && forced !== "0", why: "", fns: [] };
+  P.lite = forced === "1" ? true : forced === "0" ? false : (quick || P.soft);
+  P.onLite = fn => P.fns.push(fn);                    // modules register how to slim down at runtime
+  P.goLite = why => {
+    if (P.lite) return; P.lite = true; P.why = why || "";
+    document.documentElement.classList.add("lite");
+    P.fns.forEach(fn => { try { fn(); } catch (e) { console.warn(e); } });
+  };
+  // GPU check (once per browser, then remembered). Starting WebGL on a computer without a graphics chip
+  // can take a second, so this runs after the first paint, right before the 3D effects start.
+  // soft = no real GPU: the 3D portal becomes a CSS version and the hero video shows its poster.
+  P.probe = () => {
+    if (cached) return; cached = {};
+    let gpu = "", soft = false;
+    try {
+      const g = document.createElement("canvas").getContext("webgl", { failIfMajorPerformanceCaveat: true });   // null = software only
+      if (!g) soft = true;
+      else {
+        const ext = g.getExtension("WEBGL_debug_renderer_info");
+        gpu = ext ? String(g.getParameter(ext.UNMASKED_RENDERER_WEBGL)) : "";
+        soft = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(gpu);
+        const lose = g.getExtension("WEBGL_lose_context"); if (lose) lose.loseContext();
+      }
+    } catch (e) { soft = true; }
+    try { localStorage.setItem("kc-gpu", JSON.stringify({ ua: navigator.userAgent, gpu, soft })); } catch (e) {}
+    P.gpu = gpu;
+    if (soft && forced !== "0") {
+      P.soft = true;
+      const v = document.getElementById("hero-video"); if (v) { v.removeAttribute("autoplay"); v.pause(); }
+      if (forced !== "1") P.goLite("gpu");
+    }
+  };
+  document.documentElement.classList.toggle("lite", P.lite);
+  return P;
+})();
+
+// Run heavy setup when the browser is idle (so the page shows up first)
+const idle = (fn, timeout = 1200) => ("requestIdleCallback" in window) ? requestIdleCallback(fn, { timeout }) : setTimeout(fn, 60);
+
+// Compile a WebGL program without freezing the page (KHR_parallel_shader_compile lets the GPU
+// driver compile in the background; we poll until it's done). Resolves to the program or null.
+function compileProgram(gl, vsSrc, fsSrc, attrib0) {
+  return new Promise(resolve => {
+    const ext = gl.getExtension("KHR_parallel_shader_compile");
+    const mk = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+    const vs = mk(gl.VERTEX_SHADER, vsSrc), fs = mk(gl.FRAGMENT_SHADER, fsSrc);
+    const p = gl.createProgram(); gl.attachShader(p, vs); gl.attachShader(p, fs);
+    if (attrib0) gl.bindAttribLocation(p, 0, attrib0);
+    gl.linkProgram(p);
+    const done = () => {
+      if (gl.getProgramParameter(p, gl.LINK_STATUS)) return resolve(p);
+      console.warn(gl.getShaderInfoLog(vs) || "", gl.getShaderInfoLog(fs) || "", gl.getProgramInfoLog(p) || "");
+      resolve(null);
+    };
+    if (!ext) return done();
+    const poll = () => (gl.isContextLost() || gl.getProgramParameter(p, ext.COMPLETION_STATUS_KHR)) ? done() : setTimeout(poll, 40);
+    poll();
+  });
+}
+
+// Watch the real frame rate; if this computer can't keep up, switch to lite mode by itself
+function perfWatchdog() {
+  if (PERF.lite || PERF.forced === "0" || REDUCED) return;
+  let t0 = 0, n = 0, slow = 0; const begin = performance.now();
+  document.addEventListener("visibilitychange", () => { t0 = 0; });   // tab hidden / shown: start a new window
+  (function loop(now) {
+    if (PERF.lite) return;
+    if (!t0) { t0 = now; n = 0; }
+    n++;
+    if (now - t0 >= 2000) {
+      const fps = n * 1000 / (now - t0); t0 = 0;
+      if (now - begin > 2500) slow = fps < 24 ? slow + 1 : 0;
+      if (slow >= 3) { PERF.goLite("fps"); perfToast(); return; }
+    }
+    requestAnimationFrame(loop);
+  })(performance.now());
+}
+function perfToast() {
+  const el = document.createElement("div"); el.className = "perf-toast"; el.setAttribute("role", "status");
+  el.innerHTML = `<span>${t("perf.auto", "⚡ เปิดโหมดลื่นให้อัตโนมัติ เพราะเครื่องนี้แสดงเอฟเฟกต์เต็มไม่ไหว")}</span><button type="button">${t("perf.full", "ใช้เอฟเฟกต์เต็ม")}</button>`;
+  el.querySelector("button").onclick = () => { try { localStorage.setItem("kc-lite", "0"); } catch (e) {} location.reload(); };
+  document.body.append(el);
+  setTimeout(() => el.remove(), 9000);
+}
+function perfToggle() {
+  const b = $("#perf-toggle"); if (!b) return;
+  const label = () => b.textContent = PERF.lite ? t("perf.toFull", "✨ เอฟเฟกต์เต็ม") : t("perf.toLite", "⚡ โหมดลื่น (สเปคต่ำ)");
+  label(); PERF.onLite(label);
+  b.title = PERF.gpu ? "GPU: " + PERF.gpu : "";
+  b.addEventListener("click", () => { try { localStorage.setItem("kc-lite", PERF.lite ? "0" : "1"); } catch (e) {} location.reload(); });
+}
+
+/* =====================================================================
    MODULE: render content from CONFIG
    ===================================================================== */
 function renderContent() {
@@ -1563,12 +1770,13 @@ function renderMedia() {
     }
     ctx.strokeStyle = "#ffb547"; ctx.lineWidth = 2;
     L(cx, cy, cx + Math.cos(a) * (R + 10), cy + Math.sin(a) * (R + 10));
-    ctx.fillStyle = "#ffb547"; ctx.shadowColor = "#ffb547"; ctx.shadowBlur = 14;
+    const glow = !PERF.lite;                       // canvas shadows are slow on weak computers
+    ctx.fillStyle = "#ffb547"; ctx.shadowColor = "#ffb547"; ctx.shadowBlur = glow ? 14 : 0;
     ctx.beginPath(); ctx.arc(cx + Math.cos(a) * (R + 10), cy + Math.sin(a) * (R + 10), 4, 0, 7); ctx.fill(); ctx.shadowBlur = 0;
     // initials
     ctx.fillStyle = "#e7ecf4"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
     ctx.font = `700 ${Math.round(R * .62)}px "Chakra Petch", sans-serif`;
-    ctx.shadowColor = "rgba(69,216,255,.6)"; ctx.shadowBlur = 24; ctx.fillText(initials, cx, cy + 2); ctx.shadowBlur = 0;
+    ctx.shadowColor = "rgba(69,216,255,.6)"; ctx.shadowBlur = glow ? 24 : 0; ctx.fillText(initials, cx, cy + 2); ctx.shadowBlur = 0;
     ctx.textAlign = "start"; ctx.textBaseline = "alphabetic";
     // waveform at the bottom
     ctx.strokeStyle = "rgba(255,181,71,.7)"; ctx.lineWidth = 1.5; ctx.beginPath();
@@ -1580,7 +1788,15 @@ function renderMedia() {
   size(); draw(3);
   addEventListener("resize", () => { size(); draw(3); });
   if (document.fonts) document.fonts.ready.then(() => draw(3));
-  if (!REDUCED) { const t0 = performance.now(); (function loop(n) { draw(3 + (n - t0) / 1000); requestAnimationFrame(loop); })(t0); }
+  if (!REDUCED) {
+    // draw only while on screen; lite mode: ~20 FPS is plenty for a slow radar sweep
+    const t0 = performance.now(); let vis = true, lastDraw = 0;
+    if ("IntersectionObserver" in window) new IntersectionObserver(es => { vis = es[0].isIntersecting; }).observe(screen);
+    (function loop(n) {
+      if (vis && n - lastDraw >= (PERF.lite ? 48 : 0)) { lastDraw = n; draw(3 + (n - t0) / 1000); }
+      requestAnimationFrame(loop);
+    })(t0);
+  }
 }
 
 /* =====================================================================
@@ -1628,10 +1844,11 @@ function circuitBackground() {
     }
     return tr.pts[tr.pts.length - 1];
   }
-  let last = performance.now();
+  let last = performance.now(), running = false;
   function frame(now) {
     const dt = Math.min((now - last) / 1000, .05); last = now;
     ctx.clearRect(0, 0, w, h);
+    if (PERF.lite) { ctx.drawImage(off, 0, 0, w, h); running = false; return; }   // lite: still board, no moving pulses
     // cursor glow (interactive grid)
     if (mouse.x > -900) {
       const g = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 220);
@@ -1649,10 +1866,11 @@ function circuitBackground() {
       ctx.strokeStyle = grad; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo(x, y); ctx.stroke();
       ctx.fillStyle = `rgba(${col},.95)`; ctx.beginPath(); ctx.arc(x, y, 1.8, 0, 7); ctx.fill();
     });
-    if (!REDUCED) requestAnimationFrame(frame);
+    if (!REDUCED) { running = true; requestAnimationFrame(frame); }
   }
   build(); frame(performance.now());
-  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { build(); if (REDUCED) frame(performance.now()); }, 150); });
+  PERF.onLite(() => { if (!running) frame(performance.now()); });
+  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { build(); if (REDUCED || PERF.lite) frame(performance.now()); }, 150); });
   addEventListener("pointermove", e => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
   addEventListener("pointerleave", () => { mouse.x = mouse.y = -999; });
 }
@@ -1707,8 +1925,8 @@ function navigation() {
 function heroVideo() {
   const v = $("#hero-video");
   if (!v) return;
-  if (REDUCED) { v.removeAttribute("autoplay"); v.pause(); return; }
-  new IntersectionObserver(([e]) => { e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }).observe(v);
+  if (REDUCED || PERF.soft) { v.removeAttribute("autoplay"); v.preload = "none"; v.pause(); return; }
+  new IntersectionObserver(([e]) => { e.isIntersecting && !PERF.soft ? v.play().catch(() => {}) : v.pause(); }).observe(v);
 }
 
 /* =====================================================================
@@ -1858,8 +2076,15 @@ function clock() {
     }
   }
   update();
-  if (REDUCED) setInterval(update, 1000);
-  else (function loop() { update(); requestAnimationFrame(loop); })();
+  // update only while the clock is on screen; lite / reduced motion: a few times per second is enough
+  let vis = true; const box = $("#clock-3d");
+  if (box && "IntersectionObserver" in window) new IntersectionObserver(es => { vis = es[0].isIntersecting; }).observe(box);
+  if (REDUCED) { setInterval(update, 1000); return; }
+  let lastU = 0;
+  (function loop(now) {
+    if (vis && now - lastU >= (PERF.lite ? 250 : 0)) { lastU = now; update(); }
+    requestAnimationFrame(loop);
+  })(performance.now());
 }
 
 /* =====================================================================
@@ -1973,23 +2198,22 @@ void main(){
   gl_FragColor = vec4(pow(col, vec3(0.9)) * alpha, alpha);
 }`;
 
-function clock3d() {
-  const box = $("#clock-3d"), cv = $("#clock-canvas"); if (!box || !cv) return;
+async function clock3d() {
+  // lite mode keeps the flat SVG clock (the 3D one is ray-marched per pixel, every frame)
+  const box = $("#clock-3d"), cv = $("#clock-canvas"); if (!box || !cv || PERF.lite) return;
   const gl = cv.getContext("webgl", { alpha: true, premultipliedAlpha: true, antialias: true });
   if (!gl) return;
-  const sh = (t, src) => { const x = gl.createShader(t); gl.shaderSource(x, src); gl.compileShader(x);
-    if (!gl.getShaderParameter(x, gl.COMPILE_STATUS)) { console.warn(gl.getShaderInfoLog(x)); return null; } return x; };
-  const vs = sh(gl.VERTEX_SHADER, "attribute vec2 a; void main(){ gl_Position = vec4(a, 0.0, 1.0); }"), fs = sh(gl.FRAGMENT_SHADER, CLOCK_FS);
-  if (!vs || !fs) return;
-  const pr = gl.createProgram(); gl.attachShader(pr, vs); gl.attachShader(pr, fs); gl.bindAttribLocation(pr, 0, "a"); gl.linkProgram(pr);
-  if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) return;
+  const pr = await compileProgram(gl, "attribute vec2 a; void main(){ gl_Position = vec4(a, 0.0, 1.0); }", CLOCK_FS, "a");
+  if (!pr || PERF.lite) return;
+  let dead = false;
+  PERF.onLite(() => { dead = true; box.classList.remove("gl"); gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT); });
   gl.useProgram(pr);
   const b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
   gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
   const U = {}; ["uRes", "uT", "uH", "uM", "uS", "uTilt"].forEach(n => U[n] = gl.getUniformLocation(pr, n));
   box.classList.add("gl");
-  const size = () => { const d = Math.min(devicePixelRatio || 1, 2), r = cv.getBoundingClientRect();
+  const size = () => { const d = Math.min(devicePixelRatio || 1, 1.5), r = cv.getBoundingClientRect();
     cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d); gl.viewport(0, 0, cv.width, cv.height); };
   size(); addEventListener("resize", size);
   let tx = 0, ty = 0, cx = 0, cy = 0, vis = true, t0 = performance.now();
@@ -2012,7 +2236,7 @@ function clock3d() {
   }
   draw(performance.now());
   if (REDUCED) { setInterval(() => draw(performance.now()), 1000); return; }
-  (function loop(now) { if (vis) draw(now); requestAnimationFrame(loop); })(performance.now());
+  (function loop(now) { if (dead) return; if (vis) draw(now); requestAnimationFrame(loop); })(performance.now());
 }
 
 /* =====================================================================
@@ -2217,7 +2441,7 @@ void main(){
 function blobs() {
   const hex = h => { const n = parseInt(h.slice(1), 16); return [(n >> 16 & 255) / 255, (n >> 8 & 255) / 255, (n & 255) / 255]; };
   // unit sphere mesh (shared data)
-  const SEG = 120, pos = [], idx = [];
+  const SEG = PERF.lite ? 40 : 96, pos = [], idx = [];   // sphere detail (lite: fewer triangles)
   for (let y = 0; y <= SEG; y++) {
     const th = y / SEG * Math.PI;
     for (let x = 0; x <= SEG; x++) {
@@ -2279,7 +2503,7 @@ function blobs() {
   if (!items.length) return;
 
   function size() {
-    const d = Math.min(devicePixelRatio || 1, 1.5);
+    const d = PERF.lite ? 1 : Math.min(devicePixelRatio || 1, 1.5);
     items.forEach(it => {
       const r = it.cv.getBoundingClientRect(); if (!r.width || !r.height) return;
       it.w = r.width; it.h = r.height;
@@ -2293,7 +2517,7 @@ function blobs() {
   }
   size();
   items.forEach(it => it.meshes.forEach(m => { m.px = m.P.x * it.halfW; m.py = m.P.y * it.halfH; }));
-  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { size(); if (REDUCED) draw(0); }, 120); });
+  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { size(); if (REDUCED || PERF.lite) draw(0); }, 120); });
 
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(es => es.forEach(e => { const it = items.find(i => i.cv === e.target); if (it) it.vis = e.isIntersecting; }), { rootMargin: "100px" });
@@ -2344,9 +2568,12 @@ function blobs() {
     });
   }
   draw(0.016);
-  if (REDUCED) return;
+  if (REDUCED || PERF.lite) return;          // lite: one still frame of the blobs, no animation cost
   let last = performance.now();
-  (function loop(now) { const dt = Math.min((now - last) / 1000, 0.05); last = now; draw(dt); requestAnimationFrame(loop); })(last);
+  (function loop(now) {
+    if (PERF.lite) { draw(0); return; }
+    const dt = Math.min((now - last) / 1000, 0.05); last = now; draw(dt); requestAnimationFrame(loop);
+  })(last);
 }
 
 /* =====================================================================
@@ -2380,16 +2607,17 @@ function preloader() {
    ===================================================================== */
 let LENIS = null;
 function smoothScroll() {
-  if (REDUCED || !window.Lenis) return;
+  if (REDUCED || PERF.lite || !window.Lenis) return;      // lite: native scrolling feels better on slow computers
   try { LENIS = new Lenis({ lerp: 0.09, smoothWheel: true }); } catch (e) { LENIS = null; return; }
+  PERF.onLite(() => { try { LENIS.destroy(); } catch (e) {} LENIS = null; });
   if (window.gsap) {
     if (window.ScrollTrigger) LENIS.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add(t => LENIS.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
-  } else { const raf = t => { LENIS.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
+    gsap.ticker.add(t => { if (LENIS) LENIS.raf(t * 1000); }); gsap.ticker.lagSmoothing(0);
+  } else { const raf = t => { if (!LENIS) return; LENIS.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
   document.addEventListener("click", e => {
     const a = e.target.closest('a[href^="#"]'); if (!a) return;
     const id = a.getAttribute("href"); if (id.length < 2) return;
-    const target = document.querySelector(id); if (!target) return;
+    const target = document.querySelector(id); if (!target || !LENIS) return;
     e.preventDefault();
     LENIS.scrollTo(id === "#home" ? 0 : target, { offset: -90, duration: 1.4 });
   });
@@ -2400,7 +2628,8 @@ function smoothScroll() {
    (WebGL metaballs; desktop only)
    ===================================================================== */
 function liquid() {
-  if (!FINE_POINTER || REDUCED) return;
+  if (!FINE_POINTER || REDUCED || PERF.lite) return;
+  let dead = false; PERF.onLite(() => { dead = true; });
   const cv = document.createElement("canvas"); cv.id = "liquid"; cv.setAttribute("aria-hidden", "true");
   document.body.appendChild(cv);
   const gl = cv.getContext("webgl", { alpha: true, premultipliedAlpha: true, antialias: false });
@@ -2457,6 +2686,7 @@ function liquid() {
   (function loop(now) {
     const dt = Math.min((now - last) / 1000, 0.05); last = now; T += dt;
     const vx = (mx - pmx) / Math.max(dt, 1e-3), vy = (my - pmy) / Math.max(dt, 1e-3); pmx = mx; pmy = my;
+    if (dead) { cv.remove(); return; }
     const sp = active ? Math.hypot(vx, vy) : 0;
     speed += (Math.min(sp / 900, 1) - speed) * Math.min(1, dt * 6);
     // trail chain
@@ -2498,6 +2728,11 @@ function liquid() {
                    zoom blur, chromatic aberration, flash, vignette, grain
    ===================================================================== */
 const PORTAL_SCENE_FS = `
+#ifdef LITE
+#define STEPS 56
+#else
+#define STEPS 90
+#endif
 #ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
@@ -2623,6 +2858,7 @@ vec2 map(vec3 p){
   vec2 r = tunnel(vec3(p.xy, p.z - uTravel));
   return opU(r, boy(toLocal(p), uTime));
 }
+#ifndef LITE
 // ---- surface detail (bump) so materials read as fabric, skin, hair, leather ----
 float vn(vec3 x){ vec3 i = floor(x), f = fract(x); f = f * f * (3.0 - 2.0 * f);
   float n = i.x + i.y * 57.0 + i.z * 113.0;
@@ -2655,6 +2891,7 @@ float calcAO(vec3 p, vec3 n){
   for (int i = 0; i < 5; i++) { float hr = 0.01 + 0.05 * float(i); o += (hr - map(p + n * hr).x) * sc; sc *= 0.7; }
   return clamp(1.0 - 2.5 * o, 0.0, 1.0);
 }
+#endif
 vec3 normal(vec3 p){
   const vec2 k = vec2(1.0, -1.0); float e = 0.0012;
   return normalize(k.xyy * map(p + k.xyy * e).x + k.yyx * map(p + k.yyx * e).x + k.yxy * map(p + k.yxy * e).x + k.xxx * map(p + k.xxx * e).x);
@@ -2689,13 +2926,13 @@ void main(){
   vec3 rd = normalize(vec3(uv, -1.6));
   rd.xy *= rot(sin(uTime * 0.3) * 0.03 * (0.3 + uP));
   float t = 0.05; vec2 h = vec2(0.0); float glow = 0.0;
-  for (int i = 0; i < 90; i++) {
+  for (int i = 0; i < STEPS; i++) {
     vec3 p = ro + rd * t; h = map(p);
     if ((h.y > 3.5 && h.y < 5.5) || (h.y > 6.5 && h.y < 7.5)) glow += exp(-h.x * 10.0) * 0.03;
     if (h.x < 0.0008 * t || t > 45.0) break;
     t += h.x * 0.9;
   }
-  vec3 col;
+  vec3 col = vec3(0.0);
   vec3 fog = uFog;
   if (t < 45.0) {
     vec3 p = ro + rd * t; vec3 n = normal(p); vec3 base = matCol(h.y, p);
@@ -2715,11 +2952,17 @@ void main(){
       col += pow(1.0 - lam, 4.0) * vec3(0.05, 0.15, 0.25) * 0.4;
     } else {                               // character: shadows, AO, subsurface skin, fabric sheen, glossy leather
       float id = h.y;
+#ifndef LITE
       n = bumpN(p, n, id);
+#endif
       vec3 V = -rd, L = normalize(vec3(0.45, 0.75, 0.7)), Hh = normalize(L + V);
       float NdL = max(dot(n, L), 0.0), NdV = max(dot(n, V), 0.0), NdH = max(dot(n, Hh), 0.0);
+#ifdef LITE
+      float shd = 1.0, occ = 1.0;          // lite: no ray-traced shadow / ambient occlusion
+#else
       float shd = softShadow(p + n * 0.004, L);
       float occ = calcAO(p, n);
+#endif
       float shin = 24.0, ks = 0.06, sheen = 0.0, sss = 0.0;
       if (id < 10.5) { shin = 36.0; ks = 0.12; sss = 1.0; }            // skin
       else if (id < 11.5) { shin = 70.0; ks = 0.25; }                   // hair
@@ -2772,6 +3015,11 @@ void main(){
 }`;
 
 const PORTAL_POST_FS = `
+#ifdef LITE
+#define BLUR_N 4
+#else
+#define BLUR_N 10
+#endif
 #ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
@@ -2798,8 +3046,8 @@ vec4 voronoi(vec2 x){
 }
 vec3 sceneAt(vec2 uv){
   vec2 c = vec2(0.5); vec2 d = uv - c; vec3 acc = vec3(0.0); float tot = 0.0;
-  for (int i = 0; i < 10; i++) {
-    float fi = float(i) / 10.0; float k = 1.0 - uBlur * fi; float w = 1.0 - fi * 0.7;
+  for (int i = 0; i < BLUR_N; i++) {
+    float fi = float(i) / float(BLUR_N); float k = 1.0 - uBlur * fi; float w = 1.0 - fi * 0.7;
     acc.r += texture2D(uScene, c + d * k * (1.0 + uAb)).r * w;
     acc.g += texture2D(uScene, c + d * k).g * w;
     acc.b += texture2D(uScene, c + d * k * (1.0 - uAb)).b * w;
@@ -2828,11 +3076,13 @@ void main(){
     vec3 sc = sceneAt(uv);
     // bloom: bright parts bleed light softly
     vec3 bl = vec3(0.0);
+#ifndef LITE
     for (int i = 0; i < 12; i++) {
       float a = float(i) * 2.39996, rr = 0.006 + 0.0028 * float(i);
       vec3 sb = texture2D(uScene, uv + vec2(cos(a), sin(a)) * rr * vec2(1.0, asp)).rgb;
       bl += max(sb - 0.62, 0.0);
     }
+#endif
     sc += bl * 0.12;
     vec3 outc = sc;
     if (uCrack > 0.001) {
@@ -2902,27 +3152,60 @@ function portal() {
   const gl = cv.getContext("webgl", { antialias: false, alpha: false, premultipliedAlpha: false, powerPreference: "high-performance" });
   if (!gl) { sec.classList.add("no-gl"); return; }
   const VS = "attribute vec2 a; void main(){ gl_Position = vec4(a, 0.0, 1.0); }";
-  const mk = (type, src) => { const sh = gl.createShader(type); gl.shaderSource(sh, src); gl.compileShader(sh);
-    if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) { console.warn(gl.getShaderInfoLog(sh)); return null; } return sh; };
-  const prog = fs => { const v = mk(gl.VERTEX_SHADER, VS), f = mk(gl.FRAGMENT_SHADER, fs); if (!v || !f) return null;
-    const p = gl.createProgram(); gl.attachShader(p, v); gl.attachShader(p, f); gl.bindAttribLocation(p, 0, "a"); gl.linkProgram(p);
-    if (!gl.getProgramParameter(p, gl.LINK_STATUS)) { console.warn(gl.getProgramInfoLog(p)); return null; } return p; };
-  const P1 = prog(PORTAL_SCENE_FS), P2 = prog(PORTAL_POST_FS);
-  if (!P1 || !P2) { sec.classList.add("no-gl"); return; }
   const uni = (p, names) => { const o = {}; names.forEach(n => o[n] = gl.getUniformLocation(p, n)); return o; };
-  const U1 = uni(P1, ["uRes", "uTime", "uTravel", "uP", "uWorldA", "uWorldB", "uMix", "uFog", "uGlowCol", "uCharPos", "uCharRot", "uMouse",
-                      "uPlanet", "uNebula", "uCircuit", "uHasP", "uHasN", "uHasC"]);
-  const U2 = uni(P2, ["uScene", "uRes", "uRect", "uRad", "uBez", "uZoom", "uCrack", "uShatter", "uFlash", "uTime", "uP", "uAb", "uBlur", "uRingA", "uRingR"]);
   const quad = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, quad);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
   gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
 
+  // The two big shaders are compiled in the background, only when the portal is about to scroll into view.
+  // Until they're ready the CSS tablet (".no-gl" look) stands in, so the page never freezes.
+  // Lite mode compiles a lighter version: no ray-traced shadows / ambient occlusion / bloom, fewer steps.
+  let P1 = null, P2 = null, U1 = null, U2 = null, ready = false, builtLite = null, building = false;
+  sec.classList.add("no-gl");
+  async function build(lite) {
+    if (building) return; building = true;
+    const def = lite ? "#define LITE\n" : "";
+    const [a, b] = await Promise.all([compileProgram(gl, VS, def + PORTAL_SCENE_FS, "a"), compileProgram(gl, VS, def + PORTAL_POST_FS, "a")]);
+    building = false;
+    if (!a || !b) { if (!lite) return build(true); return; }          // full version failed on this GPU: try the light one
+    if (P1) gl.deleteProgram(P1); if (P2) gl.deleteProgram(P2);
+    P1 = a; P2 = b; builtLite = lite;
+    U1 = uni(P1, ["uRes", "uTime", "uTravel", "uP", "uWorldA", "uWorldB", "uMix", "uFog", "uGlowCol", "uCharPos", "uCharRot", "uMouse",
+                  "uPlanet", "uNebula", "uCircuit", "uHasP", "uHasN", "uHasC"]);
+    U2 = uni(P2, ["uScene", "uRes", "uRect", "uRad", "uBez", "uZoom", "uCrack", "uShatter", "uFlash", "uTime", "uP", "uAb", "uBlur", "uRingA", "uRingR"]);
+    ready = true; sec.classList.remove("no-gl"); tablet.style.transform = tablet.style.opacity = "";
+    if (PERF.lite && !lite) build(true);                                // went lite while compiling
+    if (REDUCED) frame(performance.now());
+  }
+  let texLoaded = false;
+  const startBuild = () => {
+    if (!texLoaded) {
+      texLoaded = true;
+      loadTex("planet", "assets/planet.webp", 1, false, false);
+      loadTex("nebula", "assets/nebula.webp", 2, true, true);
+      loadTex("circuit", "assets/circuit.webp", 3, true, true);
+    }
+    idle(() => build(PERF.lite));
+  };
+  if (PERF.soft) {}                                                   // no real GPU: keep the CSS version
+  else if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { io.disconnect(); startBuild(); } }, { rootMargin: "150% 0px" });
+    io.observe(sec);
+  } else startBuild();
+  PERF.onLite(() => {
+    quality = Math.min(quality, 0.5); size();
+    if (ready && !builtLite) build(true);
+  });
+
   // image textures (our own procedural art in assets/). Until they load, the shader uses its built-in look.
   const TEX = {};
-  function loadTex(key, url, unit, repeat, mip) {
-    const t = gl.createTexture(); TEX[key] = { t, unit, ok: 0 };
-    gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, t);
+  ["planet", "nebula", "circuit"].forEach((k, i) => {
+    const t = gl.createTexture(); TEX[k] = { t, unit: i + 1, ok: 0 };
+    gl.activeTexture(gl.TEXTURE0 + i + 1); gl.bindTexture(gl.TEXTURE_2D, t);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([0, 0, 0, 255]));
+  });
+  function loadTex(key, url, unit, repeat, mip) {
+    const t = TEX[key].t;
     const img = new Image();
     img.onload = () => {
       try {
@@ -2939,17 +3222,17 @@ function portal() {
     };
     img.src = url;
   }
-  loadTex("planet", "assets/planet.webp", 1, false, false);
-  loadTex("nebula", "assets/nebula.webp", 2, true, true);
-  loadTex("circuit", "assets/circuit.webp", 3, true, true);
 
   // off-screen target for the scene pass
   const tex = gl.createTexture(), fbo = gl.createFramebuffer();
-  let FW = 0, FH = 0, W = 0, H = 0, D = 1, visible = true, copyBase = { x: 0, y: 0 };
-  // render scale for the 3D scene; adjusted automatically to keep it smooth
-  const Q_MAX = 0.9, Q_MIN = 0.38; let quality = innerWidth < 700 ? 0.7 : 0.72, ftAcc = 0, ftN = 0, ftT = 0;
+  let FW = 0, FH = 0, W = 0, H = 0, D = 1, visible = false, snap = false, copyBase = { x: 0, y: 0 }, tabBase = { x: 0, y: 0, w: 1, h: 1 };
+  const css = $("#portal-css");
+  // render scale for the 3D scene; adjusted automatically to keep it smooth (lite starts lower)
+  const Q_MAX = 0.9; let Q_MIN = PERF.lite ? 0.25 : 0.38;
+  let quality = PERF.lite ? 0.45 : innerWidth < 700 ? 0.7 : 0.72, ftAcc = 0, ftN = 0, ftT = 0;
+  PERF.onLite(() => { Q_MIN = 0.25; });
   function size() {
-    D = Math.min(devicePixelRatio || 1, 2); W = stage.clientWidth; H = stage.clientHeight;
+    D = PERF.lite ? 1 : Math.min(devicePixelRatio || 1, 1.75); W = stage.clientWidth; H = stage.clientHeight;
     cv.width = Math.round(W * D); cv.height = Math.round(H * D);
     const tw = Math.max(1, tablet.offsetWidth - 32), th = Math.max(1, tablet.offsetHeight - 32);
     FW = Math.round(Math.min(1600, cv.width * quality)); FH = Math.max(2, Math.round(FW * th / tw));
@@ -2960,13 +3243,18 @@ function portal() {
     gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
     gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, tex, 0);
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    copy.style.transform = "none";
-    const cr = copy.getBoundingClientRect(), sr = stage.getBoundingClientRect();
+    copy.style.transform = "none"; tablet.style.transform = "none";
+    const cr = copy.getBoundingClientRect(), sr = stage.getBoundingClientRect(), tr = tablet.getBoundingClientRect();
     copyBase = { x: cr.left - sr.left, y: cr.top - sr.top };
+    tabBase = { x: tr.left - sr.left, y: tr.top - sr.top, w: tr.width, h: tr.height };
     measureWords();
   }
   size(); addEventListener("resize", size);
-  if ("IntersectionObserver" in window) new IntersectionObserver(es => { visible = es[0].isIntersecting; }, { rootMargin: "200px" }).observe(sec);
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => {
+    const v = es[0].isIntersecting; if (v && !visible) snap = true;      // coming back: jump straight to the current scroll spot
+    visible = v;
+  }, { rootMargin: "200px" }).observe(sec);
+  else visible = true;
 
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const ease = t => 1 - Math.pow(1 - t, 3);
@@ -2984,12 +3272,13 @@ function portal() {
   /* The scene follows the scroll position but eases toward it, so after every scroll the
      picture keeps gliding for a moment, and everything keeps floating when you stop. */
   let smooth = 0, vel = 0, travel = 0, last = performance.now(), T = 0;
-  let lockQ = false, snap = false;
+  let lockQ = false;
   window.__portal = { quality: v => { quality = v; lockQ = true; size(); }, snap: () => { snap = true; } };   // for testing / tuning
   function frame(now) {
     const rawDt = (now - last) / 1000;
     const dt = Math.min(rawDt, 0.05); last = now; T += dt;
-    if (visible) {                                     // dynamic resolution: sharper when the device can afford it
+    if (!visible && !REDUCED) { ftAcc = ftN = ftT = 0; requestAnimationFrame(frame); return; }   // off screen: costs nothing
+    if (visible && ready) {                            // dynamic resolution: sharper when the device can afford it
       ftAcc += rawDt; ftN++; ftT += rawDt;
       if (ftT > 1.2 && !lockQ) {
         const avg = ftAcc / ftN * 1000; ftAcc = ftN = ftT = 0;
@@ -3025,8 +3314,8 @@ function portal() {
       const ringA = sstep(0.13, 0.2, p) * (1 - sstep(0.5, 0.6, p)), ringR = lerp(0.42, 0.75, sstep(0.3, 0.45, p));
 
       // screen rectangle (CSS px, stage space)
-      const st = stage.getBoundingClientRect(), tb = tablet.getBoundingClientRect(), bez = 16;
-      const s0 = { x: tb.left - st.left + bez, y: tb.top - st.top + bez, w: tb.width - bez * 2, h: tb.height - bez * 2 };
+      const bez = 16;
+      const s0 = { x: tabBase.x + bez, y: tabBase.y + bez, w: tabBase.w - bez * 2, h: tabBase.h - bez * 2 };
       const cover = Math.max(W / s0.w, H / s0.h) * 1.12;
       const s1w = s0.w * cover, s1h = s0.h * cover;
       const ox = pointer.x * 14 * (1 - zoomP), oy = pointer.y * 10 * (1 - zoomP);
@@ -3039,6 +3328,15 @@ function portal() {
       copy.style.transformOrigin = `${c0x - copyBase.x}px ${c0y - copyBase.y}px`;
       copy.style.transform = `translate(${c1x - c0x}px, ${c1y - c0y}px) scale(${zk})`;
       copy.style.opacity = String(1 - sstep(0.06, 0.11, p));
+      if (!ready) {                                                      // CSS stand-in: the tablet itself zooms, then CSS worlds
+        tablet.style.transform = `translate(${c1x - c0x}px, ${c1y - c0y}px) scale(${zk})`;
+        tablet.style.opacity = String(1 - sstep(0.1, 0.125, p));
+        if (css) {
+          const w = String(wA);
+          if (css.dataset.w !== w) css.dataset.w = w;
+        }
+        fade.style.opacity = String(Math.min(0.85, flash));
+      }
 
       // ---------- the boy ----------
       let cz, cx, cy, crot;
@@ -3059,6 +3357,7 @@ function portal() {
       }
 
       // ---------- pass 1: scene ----------
+      if (ready) {
       const fog = wm > 0 ? mix3(FOG[wA], FOG[wB], wm) : FOG[wA], glow = wm > 0 ? mix3(GLOW[wA], GLOW[wB], wm) : GLOW[wA];
       gl.bindFramebuffer(gl.FRAMEBUFFER, fbo); gl.viewport(0, 0, FW, FH); gl.useProgram(P1);
       gl.uniform2f(U1.uRes, FW, FH); gl.uniform1f(U1.uTime, T); gl.uniform1f(U1.uTravel, travel); gl.uniform1f(U1.uP, p);
@@ -3084,6 +3383,7 @@ function portal() {
       gl.uniform1f(U2.uAb, 0.003 + 0.016 * fx); gl.uniform1f(U2.uBlur, 0.02 * inTunnel + 0.16 * fx);
       gl.uniform1f(U2.uRingA, ringA); gl.uniform1f(U2.uRingR, ringR);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      }
 
       // ---------- DOM layers ----------
       syncWords();
@@ -3104,7 +3404,7 @@ function portal() {
         const fl = Math.sin(T * 1.2 + i) * 10, par = (i % 3 + 1) * 12;
         el.style.transform = `translate(${pointer.x * par}px, ${fl + pointer.y * par}px) rotate(${STICKERS[i][3] + Math.sin(T + i) * 6}deg) scale(${pop})`;
       });
-      fade.style.opacity = "0";
+      if (ready) fade.style.opacity = "0";
     }
     if (!REDUCED) requestAnimationFrame(frame);
   }
@@ -3116,12 +3416,14 @@ function portal() {
    Add data-cursor="text" to any element to show a label in the cursor.
    ===================================================================== */
 function cursor() {
-  if (!FINE_POINTER) return;
+  if (!FINE_POINTER || PERF.lite) return;
   const c = document.createElement("div");
   c.className = "cursor is-hidden"; c.setAttribute("aria-hidden", "true");
   c.innerHTML = '<span class="cursor-label"></span>';
   document.body.appendChild(c);
   document.documentElement.classList.add("custom-cursor");
+  let dead = false;
+  PERF.onLite(() => { dead = true; c.remove(); document.documentElement.classList.remove("custom-cursor"); });
   const label = c.firstChild;
   let x = -100, y = -100, tx = x, ty = y, shown = false;
   addEventListener("pointermove", e => {
@@ -3139,6 +3441,7 @@ function cursor() {
     label.textContent = txt ? txt.dataset.cursor : "";
   });
   (function loop() {
+    if (dead) return;
     const k = REDUCED ? 1 : 0.22;
     x += (tx - x) * k; y += (ty - y) * k;
     c.style.transform = `translate3d(${x}px, ${y}px, 0)`;
@@ -3151,11 +3454,12 @@ function cursor() {
    Strength: data-magnetic="0.4" (default 0.3)
    ===================================================================== */
 function magnetic() {
-  if (!FINE_POINTER || REDUCED) return;
+  if (!FINE_POINTER || REDUCED || PERF.lite) return;
   const SEL = "[data-magnetic], .btn, .tab, .dock a, .lang-toggle, .logo, .to-top, .copy-btn";
   let active = null;
   const reset = el => { el.style.transition = "transform .6s cubic-bezier(.2,.8,.2,1)"; el.style.transform = ""; };
   addEventListener("pointermove", e => {
+    if (PERF.lite) return;
     const el = e.target.closest && e.target.closest(SEL);
     if (active && active !== el) { reset(active); active = null; }
     if (!el) return;
@@ -3200,15 +3504,21 @@ function marquee() {
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { x -= e.deltaX; e.preventDefault(); }
   }, { passive: false });
 
+  let vis = true, half = 0;
+  // measuring the width every frame forces a full page layout each frame, so measure only when something changes
+  const measure = () => { half = track.scrollWidth / 2; };
+  addEventListener("resize", measure); if (document.fonts) document.fonts.ready.then(measure);
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => { vis = es[0].isIntersecting; }).observe(band);
   (function loop(now) {
     const dt = Math.min((now - last) / 1000, 0.05); last = now;
+    if (!vis) { lastY = scrollY; return requestAnimationFrame(loop); }   // off screen: skip the work
     const dy = scrollY - lastY; lastY = scrollY;
     vel += (Math.abs(dy) * 8 - vel) * 0.1;
     if (!dragging) {
       if (!REDUCED) x -= (60 + vel) * dt;          // auto-scroll, faster while the page scrolls
       x += inertia * dt; inertia *= Math.pow(0.04, dt);   // glide after release
     }
-    const half = track.scrollWidth / 2;
+    if (!half) measure();
     if (half) { while (x <= -half) x += half; while (x > 0) x -= half; }
     track.style.transform = `translate3d(${x}px, 0, 0)`;
     requestAnimationFrame(loop);
@@ -3231,16 +3541,16 @@ reminders();
 typing();
 copyEmail();
 clock();
-clock3d();
 translator();
-blobs();
+perfToggle();
 smoothScroll();
 marquee();
-portal();
-liquid();
 cursor();
 magnetic();
 animations();
+// heavier WebGL effects start right after the first paint, one at a time, so the page never looks frozen
+idle(() => { PERF.probe(); blobs(); idle(() => { clock3d(); idle(() => { portal(); liquid(); }); }); });
+addEventListener("load", () => setTimeout(perfWatchdog, 800), { once: true });
 </script>
 </body>
 </html>

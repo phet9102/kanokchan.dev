@@ -1,0 +1,1000 @@
+1	I'll be home in ten minutes.	อีกสิบนาทีฉันจะถึงบ้าน
+2	I think I left my keys in the car.	ฉันว่าฉันลืมกุญแจไว้ในรถ
+3	Are you hungry?	คุณหิวไหม
+4	Can you pass me the salt?	ส่งเกลือให้หน่อยได้ไหม
+5	I need a minute to think.	ฉันขอเวลาคิดสักนาที
+6	I want to go home.	ฉันอยากกลับบ้าน
+7	It's really cold today.	วันนี้หนาวมากเลย
+8	I'm not sure about that.	ฉันไม่แน่ใจเรื่องนั้น
+9	Who told you that?	ใครบอกเรื่องนั้นกับคุณ
+10	I'm tired and hungry.	ฉันทั้งเหนื่อยทั้งหิว
+11	She's one of my best friends.	เธอเป็นหนึ่งในเพื่อนสนิทที่สุดของฉัน
+12	What do you do for fun?	ปกติคุณทำอะไรเพื่อความสนุก
+13	We have a meeting at nine.	เรามีประชุมตอนเก้าโมง
+14	What are you doing?	คุณกำลังทำอะไรอยู่
+15	We should leave now.	เราควรออกไปตอนนี้เลย
+16	He's in the kitchen.	เขาอยู่ในครัว
+17	Did you get my message?	คุณได้รับข้อความของฉันไหม
+18	Is this your bag?	นี่กระเป๋าของคุณหรือเปล่า
+19	My phone is dead.	โทรศัพท์ของฉันแบตหมด
+20	Give me a second.	ขอเวลาฉันแป๊บหนึ่ง
+21	Let's go to the beach this weekend.	สุดสัปดาห์นี้ไปทะเลกันเถอะ
+22	Oh, I didn't see you there.	อ้าว ไม่ทันเห็นว่าคุณอยู่ตรงนั้น
+23	Can I ask you something?	ขอถามอะไรหน่อยได้ไหม
+24	No, thank you.	ไม่เป็นไร ขอบคุณ
+25	Your keys are on the table.	กุญแจของคุณอยู่บนโต๊ะ
+26	This gift is for you.	ของขวัญนี้ให้คุณ
+27	I don't know what to say.	ฉันไม่รู้จะพูดอะไร
+28	I just got here.	ฉันเพิ่งมาถึง
+29	Is this your first time here?	นี่เป็นครั้งแรกที่คุณมาที่นี่ใช่ไหม
+30	That's my sister's car.	นั่นรถของพี่สาวฉัน
+31	We're all very proud of you.	พวกเราทุกคนภูมิใจในตัวคุณมาก
+32	I'm so happy for you.	ฉันดีใจกับคุณมาก ๆ
+33	Do you want to come with me?	อยากไปกับฉันไหม
+34	He works at a bank.	เขาทำงานที่ธนาคาร
+35	I'm tired, but I'm happy.	ฉันเหนื่อยแต่ก็มีความสุข
+36	Yeah, I've seen that movie.	ใช่ ฉันเคยดูหนังเรื่องนั้นแล้ว
+37	Well, that was a surprise.	อืม นั่นเซอร์ไพรส์จริง ๆ
+38	I think you're right.	ฉันคิดว่าคุณพูดถูก
+39	Come over here.	มาตรงนี้หน่อย
+40	What do you want for dinner?	มื้อเย็นอยากกินอะไร
+41	Let's eat out tonight.	คืนนี้ออกไปกินข้าวข้างนอกกันเถอะ
+42	What's the movie about?	หนังเรื่องนั้นเกี่ยวกับอะไร
+43	The food here is really good.	อาหารที่นี่อร่อยมาก
+44	Can you come to my party?	คุณมางานปาร์ตี้ของฉันได้ไหม
+45	What time do you get up?	ปกติคุณตื่นกี่โมง
+46	What did she say?	เธอพูดว่าอะไรนะ
+47	I'm busy right now.	ตอนนี้ฉันยุ่งอยู่
+48	I'll meet you at the station.	เดี๋ยวเจอกันที่สถานีนะ
+49	I have one brother and two sisters.	ฉันมีพี่ชายหนึ่งคนและพี่สาวสองคน
+50	Hey, how's it going?	เฮ้ เป็นยังไงบ้าง
+51	They live next door.	พวกเขาอยู่บ้านข้าง ๆ
+52	Can you see the sign?	คุณมองเห็นป้ายนั้นไหม
+53	Call me if you need anything.	ถ้าต้องการอะไรโทรหาฉันนะ
+54	How was your day?	วันนี้เป็นยังไงบ้าง
+55	I like your new haircut.	ฉันชอบทรงผมใหม่ของคุณ
+56	She's my best friend.	เธอเป็นเพื่อนสนิทที่สุดของฉัน
+57	Look at the sky!	ดูท้องฟ้าสิ
+58	Let me make you some coffee.	เดี๋ยวฉันชงกาแฟให้นะ
+59	You're right about that.	เรื่องนั้นคุณพูดถูก
+60	He's a really nice guy.	เขาเป็นผู้ชายที่นิสัยดีมาก
+61	Take your time.	ค่อย ๆ ทำไม่ต้องรีบ
+62	Let me help you with that.	ให้ฉันช่วยนะ
+63	I really need a vacation.	ฉันต้องการวันหยุดพักผ่อนจริง ๆ
+64	Okay, I'll call you later.	โอเค เดี๋ยวโทรหานะ
+65	I gave her my number.	ฉันให้เบอร์โทรกับเธอไป
+66	Uh, I'm not sure.	เอ่อ ฉันไม่แน่ใจ
+67	Tell me the truth.	บอกความจริงมาเถอะ
+68	I haven't seen him in years.	ฉันไม่ได้เจอเขามาหลายปีแล้ว
+69	Why are you so late?	ทำไมคุณมาสายจัง
+70	Put the box over there.	วางกล่องไว้ตรงนั้น
+71	Who is that woman?	ผู้หญิงคนนั้นเป็นใคร
+72	What time is it?	ตอนนี้กี่โมงแล้ว
+73	There's one more thing I need to do.	มีอีกเรื่องหนึ่งที่ฉันต้องทำ
+74	I'm from Thailand.	ฉันมาจากประเทศไทย
+75	I will call you tomorrow.	พรุ่งนี้ฉันจะโทรหาคุณ
+76	It's, like, really far away.	มันแบบว่าไกลมากเลยนะ
+77	Call me when you get home.	ถึงบ้านแล้วโทรหาฉันนะ
+78	She works as a nurse.	เธอทำงานเป็นพยาบาล
+79	I stayed home because it was raining.	ฉันอยู่บ้านเพราะฝนตก
+80	Do you want some water?	อยากได้น้ำสักหน่อยไหม
+81	This is our new house.	นี่คือบ้านหลังใหม่ของเรา
+82	Yes, I'd love to.	ได้เลย ยินดีมาก
+83	There is a cat on the roof.	มีแมวอยู่บนหลังคา
+84	I'll be right back.	เดี๋ยวฉันกลับมานะ
+85	What do you mean?	คุณหมายความว่ายังไง
+86	That man looks familiar.	ผู้ชายคนนั้นหน้าคุ้น ๆ
+87	We live in a little town.	เราอาศัยอยู่ในเมืองเล็ก ๆ
+88	Can you give me a ride?	ให้ฉันติดรถไปด้วยได้ไหม
+89	His car is red.	รถของเขาสีแดง
+90	Can you help us?	คุณช่วยพวกเราได้ไหม
+91	I'll ask them tomorrow.	พรุ่งนี้ฉันจะถามพวกเขา
+92	I need some sleep.	ฉันต้องนอนพักสักหน่อย
+93	We had dinner, and then we watched a movie.	เรากินข้าวเย็น แล้วก็ดูหนังกัน
+94	Shall we go?	ไปกันเลยไหม
+95	Do you want tea or coffee?	เอาชาหรือกาแฟดี
+96	Can we talk for a minute?	ขอคุยด้วยสักนาทีได้ไหม
+97	Is everything okay?	ทุกอย่างโอเคไหม
+98	I have something for you.	ฉันมีอะไรจะให้คุณ
+99	Where are you going?	คุณจะไปไหน
+100	That's a great idea!	ความคิดเยี่ยมไปเลย
+101	Is this the way to the station?	ทางนี้ไปสถานีใช่ไหม
+102	I've never been to Japan.	ฉันไม่เคยไปญี่ปุ่นเลย
+103	I'll call you tonight.	คืนนี้ฉันจะโทรหาคุณ
+104	The music is too loud.	เพลงเสียงดังเกินไป
+105	I go to work by bus.	ฉันไปทำงานโดยรถเมล์
+106	I'm sorry I'm late.	ขอโทษที่มาสาย
+107	Come over to my place after work.	เลิกงานแล้วแวะมาบ้านฉันนะ
+108	I love this song.	ฉันชอบเพลงนี้มาก
+109	Wait for me!	รอฉันด้วย
+110	Can I have some more rice?	ขอข้าวเพิ่มอีกหน่อยได้ไหม
+111	Please sit down.	เชิญนั่งก่อน
+112	Have a nice day!	ขอให้เป็นวันที่ดีนะ
+113	I have two cats.	ฉันมีแมวสองตัว
+114	There were so many people at the concert.	ที่คอนเสิร์ตคนเยอะมาก
+115	Oh my God, I can't believe it!	พระเจ้า ไม่อยากจะเชื่อเลย
+116	Thank you very much.	ขอบคุณมาก ๆ
+117	Turn off the lights, please.	ช่วยปิดไฟหน่อย
+118	I work from home on Fridays.	วันศุกร์ฉันทำงานที่บ้าน
+119	I want to thank you for your help.	ฉันอยากขอบคุณที่คุณช่วยเหลือ
+120	That's a big house.	บ้านหลังนั้นใหญ่มาก
+121	Try this cake. It's delicious.	ลองชิมเค้กนี่สิ อร่อยมาก
+122	My dad is a teacher.	พ่อของฉันเป็นครู
+123	Maybe we can meet next week.	บางทีเราอาจเจอกันสัปดาห์หน้าได้
+124	I don't feel well today.	วันนี้ฉันรู้สึกไม่ค่อยสบาย
+125	He's my friend from school.	เขาเป็นเพื่อนสมัยเรียนของฉัน
+126	Even my mom liked the movie.	ขนาดแม่ฉันยังชอบหนังเรื่องนี้เลย
+127	Are you sure?	แน่ใจเหรอ
+128	I can't find my glasses.	ฉันหาแว่นไม่เจอ
+129	The kids are playing outside.	เด็ก ๆ กำลังเล่นอยู่ข้างนอก
+130	These shoes are too small.	รองเท้าคู่นี้เล็กเกินไป
+131	The boy is riding a bike.	เด็กผู้ชายกำลังปั่นจักรยาน
+132	Put your bag on the chair.	วางกระเป๋าไว้บนเก้าอี้
+133	Please be quiet.	กรุณาเงียบหน่อย
+134	What happened?	เกิดอะไรขึ้น
+135	How much is this?	อันนี้ราคาเท่าไร
+136	Stop! That's enough.	หยุดเลย พอแล้ว
+137	Good night, sleep well.	ราตรีสวัสดิ์ หลับฝันดี
+138	I had a bad day.	วันนี้เป็นวันที่แย่มาก
+139	She walked into the room.	เธอเดินเข้ามาในห้อง
+140	Those flowers are beautiful.	ดอกไม้พวกนั้นสวยมาก
+141	Do you have any questions?	มีคำถามอะไรไหม
+142	Right, let's get started.	เอาล่ะ เริ่มกันเลย
+143	This is my first time on a plane.	นี่เป็นครั้งแรกที่ฉันขึ้นเครื่องบิน
+144	What time do you leave work?	คุณเลิกงานกี่โมง
+145	I've lived here for a year.	ฉันอยู่ที่นี่มาหนึ่งปีแล้ว
+146	Can you hear me?	ได้ยินฉันไหม
+147	Turn right at the corner.	เลี้ยวขวาตรงหัวมุม
+148	Have you ever been to Paris?	คุณเคยไปปารีสไหม
+149	Mr. Smith is our new teacher.	คุณสมิธเป็นครูคนใหม่ของเรา
+150	Can you say that again?	พูดอีกทีได้ไหม
+151	Can I use your phone?	ขอยืมใช้โทรศัพท์หน่อยได้ไหม
+152	My mom is a great cook.	แม่ฉันทำอาหารเก่งมาก
+153	May I come in?	ขอเข้าไปได้ไหม
+154	Hi, nice to meet you.	สวัสดี ยินดีที่ได้รู้จัก
+155	That's life.	ชีวิตก็เป็นแบบนี้แหละ
+156	It's nice to see you again.	ดีใจที่ได้เจอคุณอีกครั้ง
+157	I bought a new phone.	ฉันซื้อโทรศัพท์เครื่องใหม่
+158	Are you still at work?	ยังอยู่ที่ทำงานหรือเปล่า
+159	What kind of music do you like?	คุณชอบเพลงแนวไหน
+160	Do you need anything from the store?	ต้องการอะไรจากร้านไหม
+161	I only have five dollars.	ฉันมีเงินแค่ห้าดอลลาร์
+162	The baby is sleeping.	ลูกกำลังหลับอยู่
+163	She's taller than me.	เธอสูงกว่าฉัน
+164	I'm fine, thanks.	สบายดี ขอบคุณ
+165	Hello, is anyone home?	สวัสดี มีใครอยู่บ้านไหม
+166	You can keep it.	เก็บไว้เลย
+167	She's a smart girl.	เธอเป็นเด็กผู้หญิงที่ฉลาด
+168	Can you help me with my homework?	ช่วยทำการบ้านหน่อยได้ไหม
+169	I can't believe it.	ไม่อยากจะเชื่อเลย
+170	That woman is a famous singer.	ผู้หญิงคนนั้นเป็นนักร้องดัง
+171	Thanks a lot.	ขอบคุณมาก
+172	Do you want to play a game?	อยากเล่นเกมไหม
+173	Can I ask you a question?	ขอถามคำถามหนึ่งได้ไหม
+174	The movie starts at eight.	หนังเริ่มตอนสองทุ่ม
+175	I'm going home.	ฉันกำลังจะกลับบ้าน
+176	There's nothing in the fridge.	ในตู้เย็นไม่มีอะไรเลย
+177	Hmm, let me think about it.	อืม ขอคิดดูก่อนนะ
+178	They love their new house.	พวกเขารักบ้านหลังใหม่ของพวกเขามาก
+179	Nice to meet you.	ยินดีที่ได้รู้จัก
+180	Huh? What did you say?	หือ เมื่อกี้พูดว่าอะไรนะ
+181	Can you show me how to do it?	ช่วยสอนฉันทำหน่อยได้ไหม
+182	Let's walk around the park.	เดินเล่นรอบสวนกันเถอะ
+183	Guess what happened today!	ทายซิว่าวันนี้เกิดอะไรขึ้น
+184	This is an old photo of my parents.	นี่คือรูปเก่าของพ่อแม่ฉัน
+185	What the hell is going on?	นี่มันเกิดบ้าอะไรขึ้นเนี่ย
+186	Wash your hands before dinner.	ล้างมือก่อนกินข้าวเย็นนะ
+187	I always drink coffee in the morning.	ฉันดื่มกาแฟทุกเช้าเสมอ
+188	I have three classes today.	วันนี้ฉันมีเรียนสามวิชา
+189	Wow, that's amazing!	ว้าว สุดยอดไปเลย
+190	Listen to me.	ฟังฉันนะ
+191	Thanks for coming.	ขอบคุณที่มานะ
+192	I'll be there in five minutes.	อีกห้านาทีฉันจะไปถึง
+193	Actually, I changed my mind.	จริง ๆ แล้วฉันเปลี่ยนใจแล้ว
+194	Let's eat something.	หาอะไรกินกันเถอะ
+195	This place is amazing.	ที่นี่สวยมาก
+196	Where do you live?	คุณอาศัยอยู่ที่ไหน
+197	Go away!	ไปให้พ้น
+198	Let's get coffee after class.	เลิกเรียนแล้วไปกินกาแฟกันนะ
+199	Don't forget to bring an umbrella.	อย่าลืมเอาร่มมาด้วยนะ
+200	I go running every morning.	ฉันวิ่งทุกเช้า
+201	Is everything all right?	ทุกอย่างเรียบร้อยดีไหม
+202	I don't have enough money.	ฉันมีเงินไม่พอ
+203	She's a really nice person.	เธอเป็นคนดีมาก
+204	Let's watch a movie tonight.	คืนนี้ดูหนังกันเถอะ
+205	Where are the other kids?	เด็กคนอื่น ๆ อยู่ไหน
+206	Do you remember me?	จำฉันได้ไหม
+207	Welcome to my house.	ยินดีต้อนรับสู่บ้านของฉัน
+208	Sorry, wrong number.	ขอโทษค่ะ โทรผิดเบอร์
+209	This heat is killing me.	ร้อนจนจะตายอยู่แล้ว
+210	My son walks to school.	ลูกชายฉันเดินไปโรงเรียน
+211	Everyone is waiting for you.	ทุกคนกำลังรอคุณอยู่
+212	I run every morning.	ฉันวิ่งทุกเช้า
+213	Sorry, I'm late.	ขอโทษ ฉันมาสาย
+214	I don't care what they think.	ฉันไม่สนว่าพวกเขาจะคิดยังไง
+215	Where did you park the car?	คุณจอดรถไว้ที่ไหน
+216	We're moving to a new apartment.	เรากำลังจะย้ายไปอพาร์ตเมนต์ใหม่
+217	Ah, now I understand.	อ๋อ ตอนนี้เข้าใจแล้ว
+218	I have no idea.	ฉันไม่รู้เลย
+219	Can I have another cup of tea?	ขอชาอีกแก้วได้ไหม
+220	Someone is at the door.	มีคนอยู่ที่ประตู
+221	It's really hot today.	วันนี้ร้อนมาก
+222	Turn left at the next street.	เลี้ยวซ้ายที่ถนนถัดไป
+223	Is that a real diamond?	นั่นเพชรแท้หรือเปล่า
+224	I'm so happy to see you.	ดีใจมากที่ได้เจอคุณ
+225	I ate the whole pizza.	ฉันกินพิซซ่าหมดทั้งถาด
+226	See you next week.	เจอกันสัปดาห์หน้านะ
+227	I just got a new job.	ฉันเพิ่งได้งานใหม่
+228	Have fun at the party!	ขอให้สนุกกับปาร์ตี้นะ
+229	No problem.	ไม่มีปัญหา
+230	Be careful, don't break it.	ระวังนะ อย่าทำแตก
+231	She wants to travel around the world.	เธออยากเดินทางรอบโลก
+232	Which one do you want?	คุณอยากได้อันไหน
+233	You must be tired.	คุณคงเหนื่อยแน่ ๆ
+234	Are you coming to the party?	คุณจะมางานปาร์ตี้ไหม
+235	I want to buy a new laptop.	ฉันอยากซื้อแล็ปท็อปเครื่องใหม่
+236	We walked through the park.	เราเดินผ่านสวนสาธารณะ
+237	Let's do it together.	มาทำด้วยกันเถอะ
+238	My room is upstairs.	ห้องของฉันอยู่ชั้นบน
+239	I'm spending the weekend with my family.	สุดสัปดาห์นี้ฉันจะอยู่กับครอบครัว
+240	You can stay at my place tonight.	คืนนี้มานอนบ้านฉันก็ได้
+241	I always lose my keys.	ฉันทำกุญแจหายตลอด
+242	Can you move your stuff off the table?	ช่วยเอาของของคุณออกจากโต๊ะหน่อย
+243	Their son is a doctor.	ลูกชายของพวกเขาเป็นหมอ
+244	That was a stupid mistake.	นั่นเป็นความผิดพลาดที่โง่มาก
+245	What's your name?	คุณชื่ออะไร
+246	Everybody loves her.	ทุกคนรักเธอ
+247	The meeting lasted two hours.	การประชุมกินเวลาสองชั่วโมง
+248	How long have you been here?	คุณมาอยู่ที่นี่นานแค่ไหนแล้ว
+249	Are you free tonight?	คืนนี้ว่างไหม
+250	She was a quiet child.	เธอเป็นเด็กเงียบ ๆ
+251	Please sit here.	เชิญนั่งตรงนี้
+252	Of course I'll help you.	แน่นอน ฉันจะช่วยคุณ
+253	She has a pretty smile.	เธอยิ้มสวย
+254	Can you hold this for me?	ช่วยถือนี่ให้หน่อยได้ไหม
+255	Do you want to watch the game?	อยากดูการแข่งขันไหม
+256	Don't forget your umbrella.	อย่าลืมร่มของคุณนะ
+257	Do you want anything else?	ต้องการอะไรอีกไหม
+258	I want my own room.	ฉันอยากมีห้องเป็นของตัวเอง
+259	I'll be ready in five minutes.	อีกห้านาทีฉันจะพร้อม
+260	This is my second time here.	นี่เป็นครั้งที่สองที่ฉันมาที่นี่
+261	You should see a doctor.	คุณควรไปหาหมอนะ
+262	It costs ten dollars.	ราคาสิบดอลลาร์
+263	Do we have enough time?	เรามีเวลาพอไหม
+264	I walk my dog every morning.	ฉันพาหมาไปเดินเล่นทุกเช้า
+265	That's so funny!	ตลกมากเลย
+266	What are you going to wear tonight?	คืนนี้จะใส่ชุดอะไร
+267	My phone is about to die.	โทรศัพท์ฉันแบตใกล้หมดแล้ว
+268	Excuse me, sir.	ขอโทษนะครับคุณผู้ชาย
+269	This test is really hard.	ข้อสอบนี้ยากมาก
+270	Honey, I'm home!	ที่รัก ฉันกลับมาแล้ว
+271	That sounds like a good plan.	ฟังดูเป็นแผนที่ดีนะ
+272	The movie has a lot of sex and violence.	หนังเรื่องนี้มีฉากเซ็กซ์และความรุนแรงเยอะ
+273	I hate waiting in line.	ฉันเกลียดการต่อคิว
+274	I suppose you're right.	ฉันว่าคุณก็คงพูดถูก
+275	Thank God you're safe.	ขอบคุณพระเจ้าที่คุณปลอดภัย
+276	My head hurts.	ฉันปวดหัว
+277	I don't understand.	ฉันไม่เข้าใจ
+278	Whoa, slow down!	เฮ้ย ช้า ๆ หน่อย
+279	Let's go see a movie.	ไปดูหนังกันเถอะ
+280	Don't worry about it.	ไม่ต้องห่วงเรื่องนั้นหรอก
+281	That's a cool jacket.	แจ็กเก็ตนั่นเท่มาก
+282	Will you marry me?	แต่งงานกับผมนะ
+283	I miss you.	ฉันคิดถึงคุณ
+284	Can I pay by card?	จ่ายด้วยบัตรได้ไหม
+285	The trip takes about an hour.	การเดินทางใช้เวลาประมาณหนึ่งชั่วโมง
+286	You're crazy!	คุณบ้าไปแล้ว
+287	I need to change my clothes.	ฉันต้องเปลี่ยนเสื้อผ้า
+288	The soup is still hot.	ซุปยังร้อนอยู่
+289	Most people agree with you.	คนส่วนใหญ่เห็นด้วยกับคุณ
+290	Excuse me, where is the bathroom?	ขอโทษค่ะ ห้องน้ำอยู่ที่ไหน
+291	My mother calls me every day.	แม่โทรหาฉันทุกวัน
+292	Let me check my schedule.	ขอเช็กตารางเวลาก่อนนะ
+293	I'll pick you up at seven.	ฉันจะไปรับคุณตอนหนึ่งทุ่ม
+294	What does this word mean?	คำนี้แปลว่าอะไร
+295	We have the same phone.	เรามีโทรศัพท์รุ่นเดียวกัน
+296	Take care of yourself.	ดูแลตัวเองด้วยนะ
+297	Are you ready?	พร้อมหรือยัง
+298	You seem tired.	คุณดูเหนื่อย ๆ นะ
+299	Our team won the game.	ทีมของเราชนะการแข่งขัน
+300	I walk to work every day.	ฉันเดินไปทำงานทุกวัน
+301	My father loves fishing.	พ่อของฉันชอบตกปลามาก
+302	Tell me a story.	เล่านิทานให้ฟังหน่อย
+303	I've already eaten.	ฉันกินข้าวแล้ว
+304	I hope you feel better soon.	หวังว่าคุณจะหายไว ๆ นะ
+305	This is the best part of the movie.	นี่คือตอนที่ดีที่สุดของหนัง
+306	Can you open the window?	ช่วยเปิดหน้าต่างหน่อยได้ไหม
+307	Who's that lady in the red dress?	ผู้หญิงในชุดแดงคนนั้นเป็นใคร
+308	I like to read before bed.	ฉันชอบอ่านหนังสือก่อนนอน
+309	Would you like something to drink?	อยากดื่มอะไรไหม
+310	I couldn't sleep last night.	เมื่อคืนฉันนอนไม่หลับ
+311	What's your phone number?	เบอร์โทรของคุณคืออะไร
+312	Write your name here.	เขียนชื่อของคุณตรงนี้
+313	Good morning!	อรุณสวัสดิ์
+314	See you tomorrow.	เจอกันพรุ่งนี้
+315	I'll see you next time.	ไว้เจอกันครั้งหน้านะ
+316	Can I borrow your phone?	ขอยืมโทรศัพท์หน่อยได้ไหม
+317	We have four children.	เรามีลูกสี่คน
+318	I saw her last week.	ฉันเจอเธอเมื่อสัปดาห์ที่แล้ว
+319	I go to the gym once a week.	ฉันไปยิมสัปดาห์ละครั้ง
+320	Somebody left the door open.	มีใครลืมปิดประตูไว้
+321	It will probably rain tomorrow.	พรุ่งนี้ฝนน่าจะตก
+322	I can't live without coffee.	ฉันขาดกาแฟไม่ได้
+323	How many people are coming?	จะมีคนมากี่คน
+324	It was such a beautiful day.	วันนั้นเป็นวันที่สวยงามมาก
+325	She has beautiful eyes.	เธอมีดวงตาที่สวย
+326	Can you drive me to the airport?	ช่วยขับรถไปส่งฉันที่สนามบินได้ไหม
+327	This is my wife, Anna.	นี่ภรรยาของผม แอนนา
+328	I'm reading a good book.	ฉันกำลังอ่านหนังสือดี ๆ เล่มหนึ่ง
+329	Hang your coat by the door.	แขวนเสื้อโค้ตไว้ข้างประตูนะ
+330	I've known her since high school.	ฉันรู้จักเธอตั้งแต่สมัยมัธยม
+331	Don't throw your clothes on the floor.	อย่าโยนเสื้อผ้าไว้บนพื้น
+332	They named their baby Lily.	พวกเขาตั้งชื่อลูกว่าลิลี่
+333	My phone is dead again.	โทรศัพท์ฉันแบตหมดอีกแล้ว
+334	Please stand in line.	กรุณายืนต่อแถว
+335	I made this cake myself.	ฉันทำเค้กนี้เอง
+336	Aw, that's so sweet!	โอ๊ย น่ารักจังเลย
+337	What's for dinner?	มื้อเย็นกินอะไร
+338	Has anyone seen my keys?	มีใครเห็นกุญแจฉันไหม
+339	Raise your hand if you have a question.	ใครมีคำถามยกมือขึ้น
+340	Each student gets a book.	นักเรียนแต่ละคนได้หนังสือหนึ่งเล่ม
+341	Anyway, let's talk about something else.	ช่างมันเถอะ คุยเรื่องอื่นกันดีกว่า
+342	He watches television every night.	เขาดูโทรทัศน์ทุกคืน
+343	I want to learn Japanese.	ฉันอยากเรียนภาษาญี่ปุ่น
+344	Shut the door, please.	ช่วยปิดประตูหน่อย
+345	I grew up in a small town.	ฉันโตมาในเมืองเล็ก ๆ
+346	What a beautiful view!	วิวสวยจังเลย
+347	Both of my parents are teachers.	พ่อแม่ของฉันเป็นครูทั้งคู่
+348	We went on a date last night.	เมื่อคืนเราไปเดตกันมา
+349	I spend too much money on clothes.	ฉันใช้เงินซื้อเสื้อผ้ามากเกินไป
+350	She's not in the office today.	วันนี้เธอไม่ได้เข้าออฟฟิศ
+351	The ball hit the window.	ลูกบอลกระแทกหน้าต่าง
+352	Are you done yet?	เสร็จหรือยัง
+353	I'm trying to save money.	ฉันพยายามเก็บเงินอยู่
+354	Is it true?	จริงเหรอ
+355	This mango is so sweet.	มะม่วงลูกนี้หวานมาก
+356	Wait until I get back.	รอจนกว่าฉันจะกลับมานะ
+357	The food here is amazing.	อาหารที่นี่อร่อยสุด ๆ
+358	I fell asleep while watching TV.	ฉันเผลอหลับไปตอนดูทีวี
+359	Send me a message.	ส่งข้อความมาหาฉันนะ
+360	The mountain is very high.	ภูเขาลูกนั้นสูงมาก
+361	I don't live there anymore.	ฉันไม่ได้อยู่ที่นั่นแล้ว
+362	I also like dogs.	ฉันก็ชอบหมาเหมือนกัน
+363	I have some good news.	ฉันมีข่าวดีจะบอก
+364	What do you want for Christmas?	อยากได้อะไรเป็นของขวัญคริสต์มาส
+365	I'll be back in ten minutes.	อีกสิบนาทีฉันจะกลับมา
+366	Get your ass over here!	รีบมานี่เดี๋ยวนี้เลย
+367	She started her own business.	เธอเริ่มทำธุรกิจของตัวเอง
+368	She's the only one who knows.	เธอเป็นคนเดียวที่รู้
+369	I'll be ready in a couple of minutes.	อีกสักสองสามนาทีฉันจะพร้อม
+370	I totally forgot!	ฉันลืมสนิทเลย
+371	Close the door, please.	ช่วยปิดประตูหน่อย
+372	He's gay, and he's very happy with his partner.	เขาเป็นเกย์ และมีความสุขกับคู่ของเขามาก
+373	That's exactly what I meant.	นั่นแหละคือสิ่งที่ฉันหมายถึง
+374	My parents live in Chiang Mai.	พ่อแม่ของฉันอยู่ที่เชียงใหม่
+375	I'll be there in a few minutes.	อีกไม่กี่นาทีฉันจะไปถึง
+376	I'm going on vacation next month.	เดือนหน้าฉันจะไปเที่ยว
+377	This recipe is really easy.	สูตรนี้ทำง่ายมาก
+378	It's a deal!	ตกลงตามนี้
+379	Ow! That hurts!	โอ๊ย เจ็บ
+380	My back hurts.	ฉันปวดหลัง
+381	Nobody is perfect.	ไม่มีใครสมบูรณ์แบบหรอก
+382	OK, see you later.	โอเค แล้วเจอกัน
+383	This place is perfect for a picnic.	ที่นี่เหมาะกับการปิกนิกมาก
+384	Don't lie to me.	อย่าโกหกฉัน
+385	Are you free this weekend?	สุดสัปดาห์นี้ว่างไหม
+386	You look so young!	คุณดูเด็กมากเลย
+387	That's a weird question.	คำถามนั้นแปลก ๆ นะ
+388	Whatever you want.	อะไรก็ได้ที่คุณต้องการ
+389	My brother is two years older than me.	พี่ชายฉันแก่กว่าฉันสองปี
+390	I have a lot of work to do.	ฉันมีงานต้องทำเยอะมาก
+391	Are you kidding me?	ล้อเล่นหรือเปล่า
+392	I met him two years ago.	ฉันเจอเขาเมื่อสองปีก่อน
+393	The movie ends at ten.	หนังจบตอนสี่ทุ่ม
+394	One is red, and the other is blue.	อันหนึ่งสีแดง อีกอันสีน้ำเงิน
+395	The kids are playing with a ball.	เด็ก ๆ กำลังเล่นลูกบอล
+396	Finally, the weekend is here!	ในที่สุดก็ถึงวันหยุดสุดสัปดาห์
+397	There's a long line at the bank.	ที่ธนาคารคิวยาวมาก
+398	The dog wagged its tail.	หมากระดิกหางของมัน
+399	Ha! I knew it!	ฮ่า ว่าแล้วเชียว
+400	This is very important.	เรื่องนี้สำคัญมาก
+401	Be careful not to fall.	ระวังอย่าล้มนะ
+402	She has a kind heart.	เธอเป็นคนใจดี
+403	It was a long day.	วันนี้เป็นวันที่ยาวนานมาก
+404	My cat is getting fat.	แมวของฉันเริ่มอ้วนแล้ว
+405	I have class at nine.	ฉันมีเรียนตอนเก้าโมง
+406	He's going to shoot a video for his channel.	เขาจะถ่ายวิดีโอลงช่องของเขา
+407	Can you take a picture of us?	ช่วยถ่ายรูปให้พวกเราหน่อยได้ไหม
+408	They sell fresh fruit at the market.	ที่ตลาดมีขายผลไม้สด
+409	Which side of the bed do you sleep on?	คุณนอนฝั่งไหนของเตียง
+410	I wish I could stay longer.	ฉันอยากอยู่ต่ออีกนานกว่านี้จัง
+411	Love is all you need.	ความรักคือทุกสิ่งที่คุณต้องการ
+412	I changed my mind.	ฉันเปลี่ยนใจแล้ว
+413	She has long black hair.	เธอมีผมยาวสีดำ
+414	Can you cut the cake?	ช่วยตัดเค้กหน่อยได้ไหม
+415	Their wedding is in June.	งานแต่งงานของพวกเขาจัดเดือนมิถุนายน
+416	Give me one good reason.	ขอเหตุผลดี ๆ สักข้อ
+417	She wants to become a doctor.	เธออยากเป็นหมอ
+418	At least nobody got hurt.	อย่างน้อยก็ไม่มีใครบาดเจ็บ
+419	Take a look at this.	ลองดูนี่สิ
+420	Does your dog bite?	หมาของคุณกัดไหม
+421	Oh, fuck, I forgot my wallet.	เวรแล้ว ลืมกระเป๋าเงิน
+422	The cat is under the bed.	แมวอยู่ใต้เตียง
+423	It's time for bed.	ได้เวลาเข้านอนแล้ว
+424	Do you have a piece of paper?	มีกระดาษสักแผ่นไหม
+425	We have very different tastes.	รสนิยมของเราต่างกันมาก
+426	I have to catch the last train.	ฉันต้องรีบไปให้ทันรถไฟเที่ยวสุดท้าย
+427	That book is mine.	หนังสือเล่มนั้นเป็นของฉัน
+428	I get up at six every day.	ฉันตื่นตอนหกโมงทุกวัน
+429	Can you set the table?	ช่วยจัดโต๊ะอาหารหน่อยได้ไหม
+430	Wash your face before bed.	ล้างหน้าก่อนนอนนะ
+431	Do you speak English?	คุณพูดภาษาอังกฤษได้ไหม
+432	Losing the game really sucks.	แพ้เกมนี่มันแย่จริง ๆ
+433	Sometimes I work late.	บางครั้งฉันก็ทำงานดึก
+434	Bangkok is a busy city.	กรุงเทพฯ เป็นเมืองที่วุ่นวาย
+435	Today is a special day.	วันนี้เป็นวันพิเศษ
+436	Let's stick together.	อยู่ด้วยกันไว้นะ
+437	Can I ask a question?	ขอถามคำถามหน่อยได้ไหม
+438	Hey, dude, what's up?	เฮ้ เพื่อน ว่าไง
+439	I didn't realize it was so late.	ฉันไม่ทันรู้ตัวเลยว่าดึกขนาดนี้แล้ว
+440	Happy birthday!	สุขสันต์วันเกิด
+441	What's the point?	จะมีประโยชน์อะไร
+442	Enjoy your meal.	ทานให้อร่อยนะ
+443	In fact, I've never been there.	ที่จริงฉันไม่เคยไปที่นั่นเลย
+444	Do you want to dance?	อยากเต้นไหม
+445	See you soon.	แล้วเจอกันเร็ว ๆ นี้
+446	Let's meet at the bar after work.	เลิกงานแล้วเจอกันที่บาร์นะ
+447	I wonder what she's doing now.	ไม่รู้ว่าตอนนี้เธอกำลังทำอะไรอยู่
+448	It was just a joke.	มันก็แค่เรื่องตลก
+449	They're in a serious relationship.	พวกเขากำลังคบกันอย่างจริงจัง
+450	Give me another chance.	ให้โอกาสฉันอีกสักครั้ง
+451	I'd like a black coffee, please.	ขอกาแฟดำแก้วหนึ่งครับ
+452	I'm almost done.	ฉันใกล้เสร็จแล้ว
+453	Stop fighting, you two.	พวกเธอสองคนเลิกทะเลาะกันได้แล้ว
+454	Can I pay by credit card?	จ่ายด้วยบัตรเครดิตได้ไหม
+455	This is my favorite song.	นี่คือเพลงโปรดของฉัน
+456	I'm a little tired.	ฉันเหนื่อยนิดหน่อย
+457	Bye! See you tomorrow.	บาย เจอกันพรุ่งนี้
+458	Let's grab a coffee.	ไปหากาแฟกินกัน
+459	That was awesome!	สุดยอดไปเลย
+460	I feel sick.	ฉันรู้สึกไม่สบาย
+461	She lives in a small apartment.	เธออาศัยอยู่ในอพาร์ตเมนต์เล็ก ๆ
+462	Sorry, I didn't hear you.	ขอโทษนะ ฉันไม่ได้ยิน
+463	I'll be back soon.	เดี๋ยวฉันจะรีบกลับมา
+464	I can't figure out this problem.	ฉันคิดโจทย์ข้อนี้ไม่ออก
+465	Pull the door to open it.	ดึงประตูเพื่อเปิด
+466	Put the books in the box.	ใส่หนังสือลงในกล่อง
+467	I had a strange dream last night.	เมื่อคืนฉันฝันแปลก ๆ
+468	Can I have a glass of water?	ขอน้ำสักแก้วได้ไหม
+469	I can't decide what to eat.	ฉันตัดสินใจไม่ได้ว่าจะกินอะไร
+470	I'm going to the store.	ฉันจะไปร้านค้า
+471	I bet you can't do it.	พนันได้เลยว่าคุณทำไม่ได้
+472	Let's have lunch together.	ไปกินข้าวกลางวันด้วยกันนะ
+473	You have to face the truth.	คุณต้องยอมรับความจริง
+474	Does anybody have a pen?	มีใครมีปากกาไหม
+475	I'm afraid of the dark.	ฉันกลัวความมืด
+476	Thanks, buddy.	ขอบใจนะเพื่อน
+477	Your puppy is so cute!	ลูกหมาของคุณน่ารักมาก
+478	We're very close friends.	เราเป็นเพื่อนสนิทกันมาก
+479	Where's the bathroom?	ห้องน้ำอยู่ตรงไหน
+480	Did you see the show last night?	เมื่อคืนดูรายการนั้นหรือเปล่า
+481	Do you mind if I sit here?	ขอนั่งตรงนี้ได้ไหม
+482	Someone stole my bike.	มีคนขโมยจักรยานของฉัน
+483	I'm full. I can't eat anymore.	อิ่มแล้ว กินไม่ไหวแล้ว
+484	She works for a big company.	เธอทำงานให้บริษัทใหญ่
+485	Meet me in front of the school.	เจอกันหน้าโรงเรียนนะ
+486	Go ahead, I'll catch up.	ไปก่อนเลย เดี๋ยวฉันตามไป
+487	Wait a moment, please.	กรุณารอสักครู่
+488	In that case, let's go tomorrow.	ถ้าอย่างนั้นไปพรุ่งนี้กัน
+489	Are they dating?	พวกเขาคบกันอยู่หรือเปล่า
+490	It's raining. I'll go anyway, though.	ฝนตก แต่ฉันก็จะไปอยู่ดี
+491	Exercise is good for your body.	การออกกำลังกายดีต่อร่างกาย
+492	Mrs. Brown is our neighbor.	คุณนายบราวน์เป็นเพื่อนบ้านของเรา
+493	These pants are too long.	กางเกงตัวนี้ยาวเกินไป
+494	Life's a bitch sometimes.	บางครั้งชีวิตก็โหดร้าย
+495	I promise I'll call you.	ฉันสัญญาว่าจะโทรหาคุณ
+496	I'm glad you came.	ดีใจที่คุณมา
+497	He kissed her goodbye.	เขาจูบลาเธอ
+498	You can choose either one.	คุณเลือกอันไหนก็ได้
+499	They had to fire him.	พวกเขาต้องไล่เขาออก
+500	These plants grow fast.	ต้นไม้พวกนี้โตเร็ว
+501	They're going to build a new mall here.	พวกเขาจะสร้างห้างใหม่ตรงนี้
+502	Dinner is on the table.	อาหารเย็นอยู่บนโต๊ะแล้ว
+503	I bought two tickets for the concert.	ฉันซื้อตั๋วคอนเสิร์ตมาสองใบ
+504	It doesn't matter.	ไม่เป็นไรหรอก
+505	She teaches English at a high school.	เธอสอนภาษาอังกฤษที่โรงเรียนมัธยม
+506	My cat sleeps all day.	แมวของฉันนอนทั้งวัน
+507	My sister lives in Bangkok.	พี่สาวของฉันอยู่กรุงเทพฯ
+508	This is my girlfriend, May.	นี่แฟนผม ชื่อเมย์
+509	Don't forget your hat. It's sunny.	อย่าลืมหมวกนะ แดดแรง
+510	Please don't touch the paintings.	กรุณาอย่าแตะภาพวาด
+511	The traffic was terrible this morning.	เช้านี้รถติดหนักมาก
+512	Let's have a beer after work.	เลิกงานแล้วไปดื่มเบียร์กัน
+513	Damn, I missed the bus.	ให้ตายสิ ตกรถเมล์อีกแล้ว
+514	Mm-hmm, I'm listening.	อืม ฟังอยู่
+515	He joined a book club.	เขาเข้าชมรมหนังสือ
+516	You never cease to amaze me.	คุณทำให้ฉันทึ่งได้เสมอเลย
+517	Something smells good!	อะไรหอมจัง
+518	Thank you for the gift.	ขอบคุณสำหรับของขวัญนะ
+519	Are you serious?	พูดจริงเหรอ
+520	We plan to travel next year.	เราวางแผนจะไปเที่ยวปีหน้า
+521	Be careful when you cross the street.	ระวังตอนข้ามถนนนะ
+522	Our team played really well.	ทีมของเราเล่นได้ดีมาก
+523	Are you ready to order?	พร้อมสั่งอาหารหรือยังคะ
+524	Don't cry. Everything will be okay.	อย่าร้องไห้เลย ทุกอย่างจะโอเค
+525	The temperature dropped below zero.	อุณหภูมิลดลงต่ำกว่าศูนย์องศา
+526	Be careful, don't drop it!	ระวังนะ อย่าทำตก
+527	Stop acting like a child.	เลิกทำตัวเหมือนเด็กได้แล้ว
+528	I like being alone sometimes.	บางครั้งฉันก็ชอบอยู่คนเดียว
+529	Is this seat taken?	ที่นั่งนี้มีคนนั่งหรือยัง
+530	Eh, it's not that bad.	เอ๊ะ มันก็ไม่ได้แย่ขนาดนั้น
+531	The bank is between the café and the hotel.	ธนาคารอยู่ระหว่างร้านกาแฟกับโรงแรม
+532	I start work at eight.	ฉันเริ่มงานตอนแปดโมง
+533	She's twenty years old.	เธออายุยี่สิบปี
+534	My foot hurts.	ฉันเจ็บเท้า
+535	There are seven days in a week.	หนึ่งสัปดาห์มีเจ็ดวัน
+536	I'll finish my homework first.	ฉันจะทำการบ้านให้เสร็จก่อน
+537	He's a real gentleman.	เขาเป็นสุภาพบุรุษตัวจริง
+538	Can you hand me that cup?	ช่วยหยิบถ้วยใบนั้นให้หน่อยได้ไหม
+539	It's rude to point at people.	การชี้นิ้วใส่คนอื่นเป็นเรื่องไม่สุภาพ
+540	Make a wish and blow out the candles.	อธิษฐานแล้วเป่าเทียนเลย
+541	We live in a small apartment.	เราอยู่ในอพาร์ตเมนต์เล็ก ๆ
+542	Are you in trouble?	คุณกำลังมีปัญหาหรือเปล่า
+543	Thank you, sweetie.	ขอบใจนะจ๊ะ ที่รัก
+544	She loves to sing in the shower.	เธอชอบร้องเพลงตอนอาบน้ำ
+545	Can you pass the salt, please?	ช่วยส่งเกลือให้หน่อย
+546	Nobody can beat him at chess.	ไม่มีใครเล่นหมากรุกชนะเขาได้
+547	Can I have a piece of cake?	ขอเค้กสักชิ้นได้ไหม
+548	I need new running shoes.	ฉันต้องการรองเท้าวิ่งคู่ใหม่
+549	You're welcome.	ด้วยความยินดี
+550	They believed in many gods.	พวกเขานับถือเทพเจ้าหลายองค์
+551	She wore a white dress.	เธอสวมชุดสีขาว
+552	He kicked the ball into the goal.	เขาเตะลูกบอลเข้าประตู
+553	Don't leave your bag here.	อย่าทิ้งกระเป๋าไว้ตรงนี้
+554	Call the fire department!	โทรเรียกหน่วยดับเพลิงเร็ว
+555	I have an early meeting tomorrow.	พรุ่งนี้ฉันมีประชุมแต่เช้า
+556	The kids are excited about the trip.	เด็ก ๆ ตื่นเต้นกับทริปนี้มาก
+557	We had a wonderful time.	เรามีช่วงเวลาที่ดีมาก
+558	Seriously, I'm not joking.	จริงจังนะ ฉันไม่ได้ล้อเล่น
+559	Which country are you from?	คุณมาจากประเทศอะไร
+560	Don't talk with your mouth full.	อย่าพูดตอนที่อาหารเต็มปาก
+561	The police want to question him.	ตำรวจต้องการสอบปากคำเขา
+562	She's a dear friend of mine.	เธอเป็นเพื่อนที่รักของฉัน
+563	The food was quite good.	อาหารค่อนข้างอร่อย
+564	She's really smart.	เธอฉลาดมาก
+565	Her husband is a chef.	สามีของเธอเป็นเชฟ
+566	Shh! The baby is sleeping.	ชู่ว์ ลูกกำลังหลับ
+567	Thanks for inviting me.	ขอบคุณที่ชวนฉันนะ
+568	You should get some rest.	คุณควรพักผ่อนบ้างนะ
+569	Is this pen yours?	ปากกาด้ามนี้ของคุณหรือเปล่า
+570	The park is behind the school.	สวนสาธารณะอยู่หลังโรงเรียน
+571	I can't find my car keys.	ฉันหากุญแจรถไม่เจอ
+572	Wait until the end of the movie.	รอจนหนังจบก่อนนะ
+573	I need to dress up for the party.	ฉันต้องแต่งตัวไปงานปาร์ตี้
+574	She has a red car.	เธอมีรถสีแดง
+575	He always makes me laugh.	เขาทำให้ฉันหัวเราะได้ตลอด
+576	Thanks for your help.	ขอบคุณสำหรับความช่วยเหลือ
+577	I agree with you.	ฉันเห็นด้วยกับคุณ
+578	The coffee machine is broken.	เครื่องชงกาแฟเสีย
+579	Yep, that's right.	ใช่ ถูกต้อง
+580	I need to return this book.	ฉันต้องคืนหนังสือเล่มนี้
+581	Is there enough space in the car?	ในรถมีที่พอไหม
+582	Are you mad at me?	โกรธฉันอยู่หรือเปล่า
+583	Just tell me the truth.	บอกความจริงมาเถอะ
+584	Can I have some ice, please?	ขอน้ำแข็งหน่อยได้ไหม
+585	Follow me, please.	เชิญตามฉันมาเลย
+586	The kids are playing outside.	เด็ก ๆ เล่นอยู่ข้างนอก
+587	I felt like an idiot.	ฉันรู้สึกเหมือนคนโง่เลย
+588	Those are the rules.	นั่นคือกฎ
+589	Absolutely, I'd love to come.	แน่นอน ฉันอยากไปมาก
+590	What should we do next?	ต่อไปเราควรทำอะไร
+591	Don't lean against the door.	อย่าพิงประตูนะ
+592	Her husband is American.	สามีของเธอเป็นคนอเมริกัน
+593	There's no need to hurry.	ไม่ต้องรีบหรอก
+594	You scared me!	คุณทำฉันตกใจ
+595	Did you notice anything strange?	คุณสังเกตเห็นอะไรแปลก ๆ ไหม
+596	I'll have the fried chicken.	ขอไก่ทอดค่ะ
+597	Can you ride a bike?	คุณปั่นจักรยานเป็นไหม
+598	I listen to music on the way to work.	ฉันฟังเพลงระหว่างทางไปทำงาน
+599	Do you want to join us?	อยากมาร่วมกับพวกเราไหม
+600	The bank is next to the post office.	ธนาคารอยู่ติดกับที่ทำการไปรษณีย์
+601	Good-bye, and thanks for everything.	ลาก่อน และขอบคุณสำหรับทุกอย่าง
+602	The rain ruined our picnic.	ฝนทำให้ปิกนิกของเราพังหมด
+603	Thousands of people died in the war.	มีคนตายในสงครามหลายพันคน
+604	Don't screw this up.	อย่าทำพังล่ะ
+605	Turn on the light, please.	ช่วยเปิดไฟหน่อย
+606	We walked along the beach.	เราเดินเล่นไปตามชายหาด
+607	The poor dog was so hungry.	หมาน่าสงสารหิวมาก
+608	That makes sense.	ก็มีเหตุผลนะ
+609	Will you be able to come?	คุณจะมาได้ไหม
+610	What's the matter?	เป็นอะไรไป
+611	Can you keep a secret?	เก็บความลับได้ไหม
+612	I'm flying to Tokyo tomorrow.	พรุ่งนี้ฉันจะบินไปโตเกียว
+613	Write your name at the top of the page.	เขียนชื่อไว้ที่ด้านบนของหน้า
+614	Sure, no problem.	ได้สิ ไม่มีปัญหา
+615	That's not fair!	แบบนี้ไม่ยุติธรรมเลย
+616	Just relax and enjoy the view.	ผ่อนคลายแล้วชมวิวไปเถอะ
+617	Her boyfriend is really nice.	แฟนของเธอนิสัยดีมาก
+618	What's the plan for today?	วันนี้มีแผนอะไรบ้าง
+619	Everyone makes mistakes.	ใคร ๆ ก็ทำผิดพลาดได้
+620	Good luck on your test!	ขอให้โชคดีกับการสอบนะ
+621	We went there as a group.	เราไปที่นั่นกันเป็นกลุ่ม
+622	Their daughter just started school.	ลูกสาวของพวกเขาเพิ่งเริ่มไปโรงเรียน
+623	He's in his second year of college.	เขาเรียนมหาวิทยาลัยปีสอง
+624	She's the president of the club.	เธอเป็นประธานชมรม
+625	How far is it to the station?	จากนี่ไปสถานีไกลแค่ไหน
+626	Please sign here.	กรุณาเซ็นชื่อตรงนี้
+627	Could you close the window?	ช่วยปิดหน้าต่างหน่อยได้ไหม
+628	I left you a message.	ฉันฝากข้อความไว้ให้คุณแล้ว
+629	Don't freak out, but I lost your book.	อย่าเพิ่งตกใจนะ แต่ฉันทำหนังสือคุณหาย
+630	It's not your fault.	ไม่ใช่ความผิดของคุณหรอก
+631	Can I ask you a quick question?	ขอถามอะไรสั้น ๆ หน่อยได้ไหม
+632	The shop is open till ten.	ร้านเปิดถึงสี่ทุ่ม
+633	Everyone came except Tom.	ทุกคนมากันหมด ยกเว้นทอม
+634	Are you single?	คุณโสดหรือเปล่า
+635	I like your shirt.	ฉันชอบเสื้อของคุณ
+636	You have no choice.	คุณไม่มีทางเลือก
+637	May I have your attention, please?	ขอความสนใจทุกคนหน่อยค่ะ
+638	The power went out last night.	เมื่อคืนไฟดับ
+639	I want to quit my job.	ฉันอยากลาออกจากงาน
+640	That's the right answer.	นั่นคือคำตอบที่ถูกต้อง
+641	I trust you.	ฉันไว้ใจคุณ
+642	It costs fifty baht.	ราคาห้าสิบบาท
+643	I broke my leg playing football.	ฉันขาหักตอนเล่นฟุตบอล
+644	Wake me up at six, please.	ช่วยปลุกฉันตอนหกโมงนะ
+645	It's just human nature.	มันก็แค่ธรรมชาติของมนุษย์
+646	Look at all the stars tonight.	ดูดาวเต็มฟ้าคืนนี้สิ
+647	He's a student at Chulalongkorn University.	เขาเป็นนักศึกษามหาวิทยาลัยจุฬาลงกรณ์
+648	I need some fresh air.	ฉันต้องการสูดอากาศบริสุทธิ์หน่อย
+649	Pull up a chair and sit down.	ลากเก้าอี้มานั่งสิ
+650	He pointed a gun at me.	เขาเล็งปืนมาที่ฉัน
+651	The class begins at nine.	ชั้นเรียนเริ่มตอนเก้าโมง
+652	His death was a shock to everyone.	การตายของเขาทำให้ทุกคนตกใจ
+653	There's a big tree in our garden.	มีต้นไม้ใหญ่อยู่ในสวนของเรา
+654	My boss is very strict.	เจ้านายของฉันเข้มงวดมาก
+655	I haven't seen you in a while.	ไม่ได้เจอกันสักพักแล้วนะ
+656	I got a present for you.	ฉันมีของขวัญให้คุณ
+657	Let's take a taxi instead.	งั้นนั่งแท็กซี่ไปแทนดีกว่า
+658	You're so lucky!	คุณโชคดีมากเลย
+659	Keep your passport in a safe place.	เก็บพาสปอร์ตไว้ในที่ปลอดภัยนะ
+660	It's cold outside.	ข้างนอกหนาว
+661	Ahh, this is so relaxing.	อ่า ผ่อนคลายสุด ๆ
+662	Can you explain that again?	ช่วยอธิบายอีกครั้งได้ไหม
+663	I watched a funny video online.	ฉันดูคลิปตลก ๆ ในเน็ต
+664	Use your brain!	ใช้สมองคิดหน่อยสิ
+665	I completely forgot about it.	ฉันลืมเรื่องนั้นไปเลย
+666	She has a beautiful voice.	เธอมีเสียงที่ไพเราะ
+667	Who made this cake?	ใครทำเค้กนี้
+668	Let's get a drink.	ไปหาอะไรดื่มกัน
+669	How was your trip?	ทริปของคุณเป็นยังไงบ้าง
+670	The monkey stole my banana.	ลิงขโมยกล้วยของฉัน
+671	There were about a hundred people there.	ที่นั่นมีคนประมาณร้อยคน
+672	Can you fix my computer?	ช่วยซ่อมคอมพิวเตอร์ให้หน่อยได้ไหม
+673	I spent the entire day in bed.	ฉันนอนอยู่บนเตียงทั้งวัน
+674	I didn't expect to see you here.	ไม่คิดว่าจะเจอคุณที่นี่
+675	The house cost a million dollars.	บ้านหลังนั้นราคาหนึ่งล้านดอลลาร์
+676	Dogs aren't allowed in the store.	ห้ามนำสุนัขเข้าร้าน
+677	I'll love you forever.	ฉันจะรักคุณตลอดไป
+678	Ugh, I have to work tomorrow.	เฮ้อ พรุ่งนี้ต้องทำงานอีกแล้ว
+679	The cat is hiding under the bed.	แมวแอบอยู่ใต้เตียง
+680	They live in a huge house.	พวกเขาอาศัยอยู่ในบ้านหลังใหญ่มาก
+681	That's an interesting idea.	เป็นไอเดียที่น่าสนใจนะ
+682	They had a big fight last night.	เมื่อคืนพวกเขาทะเลาะกันใหญ่โต
+683	Roll the dough into a ball.	คลึงแป้งให้เป็นก้อนกลม
+684	I need to wash my clothes.	ฉันต้องซักเสื้อผ้า
+685	Don't drive so fast.	อย่าขับเร็วขนาดนั้น
+686	Grab a chair and sit down.	หยิบเก้าอี้มานั่งสิ
+687	My teacher is very kind.	ครูของฉันใจดีมาก
+688	This movie is crap.	หนังเรื่องนี้ห่วยแตก
+689	What's your favorite animal?	สัตว์ที่คุณชอบที่สุดคืออะไร
+690	Be careful, don't burn yourself.	ระวังนะ อย่าให้โดนลวก
+691	It's been a tough week.	สัปดาห์นี้หนักหนาสาหัสมาก
+692	Let's try that new restaurant.	ลองไปร้านอาหารร้านใหม่นั้นกัน
+693	What sort of food do you like?	คุณชอบอาหารประเภทไหน
+694	I have a bad tooth.	ฉันปวดฟัน
+695	They have a happy marriage.	ชีวิตแต่งงานของพวกเขามีความสุข
+696	I'm so proud of you.	ฉันภูมิใจในตัวคุณมาก
+697	My uncle lives in the country.	ลุงของฉันอยู่ต่างจังหวัด
+698	Don't push me!	อย่าผลักฉันสิ
+699	I fell on my butt.	ฉันล้มก้นกระแทก
+700	They offered me a job.	พวกเขาเสนองานให้ฉัน
+701	Oh Lord, please help us.	โอ้ พระเจ้า โปรดช่วยพวกเราด้วย
+702	I won't go unless you come too.	ฉันจะไม่ไปถ้าคุณไม่ไปด้วย
+703	I have a feeling we'll win.	ฉันมีลางสังหรณ์ว่าเราจะชนะ
+704	He wore a black suit to the wedding.	เขาใส่สูทสีดำไปงานแต่งงาน
+705	Uh-huh, I see.	อือฮึ เข้าใจแล้ว
+706	The kids are sitting on the floor.	เด็ก ๆ นั่งอยู่บนพื้น
+707	Do you want ice cream?	อยากกินไอศกรีมไหม
+708	What's your favorite movie?	หนังเรื่องโปรดของคุณคือเรื่องอะไร
+709	The baby was naked in the bath.	ลูกไม่ได้ใส่อะไรเลยตอนอยู่ในอ่างอาบน้ำ
+710	I made a shopping list.	ฉันเขียนรายการของที่ต้องซื้อไว้แล้ว
+711	He gave her a diamond ring.	เขาให้แหวนเพชรกับเธอ
+712	Please clean your room.	ช่วยทำความสะอาดห้องของคุณด้วย
+713	I want to apologize for what I said.	ฉันอยากขอโทษสำหรับสิ่งที่ฉันพูดไป
+714	Is that clear?	เข้าใจชัดเจนไหม
+715	The Earth goes around the Sun.	โลกโคจรรอบดวงอาทิตย์
+716	Let's share this pizza.	แบ่งพิซซ่านี่กินกันนะ
+717	Please fill out this form.	กรุณากรอกแบบฟอร์มนี้
+718	Cool! Let's do it.	เจ๋ง ทำเลย
+719	Let's order a pizza.	สั่งพิซซ่ากันเถอะ
+720	That's ridiculous!	ไร้สาระสิ้นดี
+721	I'm lucky to be alive.	ฉันโชคดีที่ยังมีชีวิตอยู่
+722	Let's pretend we're pirates.	มาสมมติว่าเราเป็นโจรสลัดกัน
+723	She's still in the hospital.	เธอยังอยู่ในโรงพยาบาล
+724	Why are you so sad?	ทำไมคุณดูเศร้าจัง
+725	A bunch of us are going to the beach.	พวกเรากลุ่มหนึ่งจะไปทะเลกัน
+726	I'll be there in half an hour.	อีกครึ่งชั่วโมงฉันจะไปถึง
+727	Call the police!	โทรเรียกตำรวจเร็ว
+728	We had fish for dinner.	มื้อเย็นเรากินปลา
+729	Can you open the window?	ช่วยเปิดหน้าต่างหน่อยได้ไหม
+730	I'm busy this weekend.	สุดสัปดาห์นี้ฉันยุ่ง
+731	Did you see the sign?	คุณเห็นป้ายนั้นไหม
+732	I got a call from my mom.	แม่โทรมาหาฉัน
+733	Would you like a slice of apple pie?	รับพายแอปเปิลสักชิ้นไหม
+734	Can you answer the phone?	ช่วยรับโทรศัพท์หน่อยได้ไหม
+735	Raise your hand if you know the answer.	ใครรู้คำตอบยกมือขึ้น
+736	I left my phone somewhere.	ฉันวางโทรศัพท์ไว้ที่ไหนสักแห่ง
+737	I'll have a chicken sandwich.	ขอแซนด์วิชไก่หนึ่งชิ้น
+738	The bus comes every thirty minutes.	รถเมล์มาทุกสามสิบนาที
+739	These shoes were on sale.	รองเท้าคู่นี้ซื้อตอนลดราคา
+740	You can choose any color you like.	คุณเลือกสีไหนก็ได้ที่ชอบ
+741	I'll definitely be there.	ฉันไปแน่นอน
+742	I swear I didn't do it.	ฉันสาบานว่าฉันไม่ได้ทำ
+743	The test was pretty easy.	ข้อสอบค่อนข้างง่าย
+744	We took a boat to the island.	เรานั่งเรือไปที่เกาะ
+745	I'm too tired to go out.	ฉันเหนื่อยเกินกว่าจะออกไปข้างนอก
+746	Ho ho ho, Merry Christmas!	โฮ่ โฮ่ โฮ่ สุขสันต์วันคริสต์มาส
+747	She's upset because she failed the test.	เธออารมณ์เสียเพราะสอบตก
+748	I need to eat less sugar.	ฉันต้องกินน้ำตาลให้น้อยลง
+749	The store opens at nine.	ร้านเปิดตอนเก้าโมง
+750	It costs about a thousand baht.	ราคาประมาณหนึ่งพันบาท
+751	You shouldn't smoke.	คุณไม่ควรสูบบุหรี่
+752	Don't embarrass me in front of my friends.	อย่าทำให้ฉันขายหน้าต่อหน้าเพื่อน ๆ
+753	My brother plays in a band.	พี่ชายฉันเล่นอยู่ในวงดนตรี
+754	I can't bear this heat.	ฉันทนความร้อนนี้ไม่ไหว
+755	None of my friends could come.	ไม่มีเพื่อนของฉันคนไหนมาได้เลย
+756	The kids are waiting for Santa.	เด็ก ๆ กำลังรอซานต้า
+757	He's very strong.	เขาแข็งแรงมาก
+758	It's against the law.	มันผิดกฎหมาย
+759	Where's the toilet?	ห้องน้ำอยู่ที่ไหน
+760	The cat jumped onto the table.	แมวกระโดดขึ้นไปบนโต๊ะ
+761	Count to ten and calm down.	นับหนึ่งถึงสิบแล้วใจเย็นลง
+762	I had eggs for breakfast.	มื้อเช้าฉันกินไข่
+763	Let's go shopping on Saturday.	วันเสาร์ไปช้อปปิ้งกันนะ
+764	The sky is so blue today.	วันนี้ท้องฟ้าสีฟ้าสดใสมาก
+765	That was a horrible movie.	หนังเรื่องนั้นแย่มาก
+766	Oh shit, I forgot my wallet.	ชิบหายแล้ว ลืมกระเป๋าตังค์
+767	Can you do me a favor?	ช่วยอะไรฉันหน่อยได้ไหม
+768	I can handle it.	ฉันจัดการเองได้
+769	She hung a picture on the wall.	เธอแขวนรูปไว้ที่ผนัง
+770	I love modern art.	ฉันชอบศิลปะสมัยใหม่
+771	Cover the pot with a lid.	ปิดหม้อด้วยฝา
+772	He broke his arm.	เขาแขนหัก
+773	Perhaps we should wait.	บางทีเราควรรอก่อน
+774	The rules are simple.	กติกาง่าย ๆ
+775	I take the bus to work.	ฉันนั่งรถเมล์ไปทำงาน
+776	I really appreciate your help.	ฉันซาบซึ้งในความช่วยเหลือของคุณจริง ๆ
+777	He hurt himself playing football.	เขาบาดเจ็บตอนเล่นฟุตบอล
+778	Let's surprise Mom for her birthday.	มาเซอร์ไพรส์วันเกิดแม่กันเถอะ
+779	Kids love candy.	เด็ก ๆ ชอบขนมหวาน
+780	I cut my finger.	ฉันโดนมีดบาดนิ้ว
+781	The movie is worth watching.	หนังเรื่องนี้คุ้มค่าแก่การดู
+782	Texas is a big state.	เท็กซัสเป็นรัฐที่ใหญ่
+783	Is it possible to change my seat?	ขอเปลี่ยนที่นั่งได้ไหม
+784	He wants to be rich.	เขาอยากรวย
+785	I have short hair.	ฉันผมสั้น
+786	The king lived in a castle.	พระราชาประทับอยู่ในปราสาท
+787	Please knock before you come in.	กรุณาเคาะประตูก่อนเข้ามา
+788	Grandma baked cookies for us.	คุณยายอบคุกกี้ให้พวกเรา
+789	The doctor examined the boy's penis and said everything was normal.	หมอตรวจอวัยวะเพศของเด็กชายแล้วบอกว่าทุกอย่างปกติ
+790	I love learning about history.	ฉันชอบเรียนรู้เรื่องประวัติศาสตร์
+791	Imagine living by the sea.	ลองนึกภาพว่าได้อยู่ริมทะเลดูสิ
+792	This is my third cup of coffee today.	นี่เป็นกาแฟแก้วที่สามของฉันในวันนี้
+793	He lost a lot of blood.	เขาเสียเลือดมาก
+794	Drugs can ruin your life.	ยาเสพติดทำลายชีวิตคุณได้
+795	What are your plans for the future?	คุณมีแผนอะไรสำหรับอนาคต
+796	Can you prove it?	คุณพิสูจน์ได้ไหม
+797	What a nice surprise!	เซอร์ไพรส์ที่น่ารักจริง ๆ
+798	Alright, let's go.	เอาล่ะ ไปกันเถอะ
+799	The captain told us to sit down.	กัปตันบอกให้พวกเรานั่งลง
+800	Good evening, everyone.	สวัสดีตอนเย็นทุกคน
+801	Congratulations on your new job!	ยินดีด้วยกับงานใหม่นะ
+802	The computer system is down.	ระบบคอมพิวเตอร์ล่ม
+803	She broke the world record.	เธอทำลายสถิติโลก
+804	What age did you start school?	คุณเริ่มไปโรงเรียนตอนอายุเท่าไร
+805	You deserve a break.	คุณสมควรได้พักบ้าง
+806	Is it normal to feel this way?	รู้สึกแบบนี้เป็นเรื่องปกติไหม
+807	I saw her yesterday.	ฉันเจอเธอเมื่อวาน
+808	Don't be such a jerk.	อย่าทำตัวน่ารำคาญนักเลย
+809	Yay, we won!	เย้ เราชนะแล้ว
+810	A bird is singing outside.	มีนกร้องอยู่ข้างนอก
+811	My nose is running.	ฉันน้ำมูกไหล
+812	Sorry to bother you.	ขอโทษที่รบกวนนะ
+813	I'm a big fan of her music.	ฉันเป็นแฟนเพลงตัวยงของเธอ
+814	I got a letter from my grandma.	ฉันได้รับจดหมายจากยาย
+815	I'd rather stay home tonight.	คืนนี้ฉันอยากอยู่บ้านมากกว่า
+816	Where are you headed?	คุณกำลังจะไปไหน
+817	I'm interested in photography.	ฉันสนใจการถ่ายภาพ
+818	I owe you one.	ติดหนี้บุญคุณคุณครั้งหนึ่งนะ
+819	My sister is pregnant.	พี่สาวของฉันกำลังตั้งครรภ์
+820	The storm destroyed many houses.	พายุทำลายบ้านเรือนไปหลายหลัง
+821	We saw a bear in the forest.	เราเห็นหมีในป่า
+822	He played an evil king in the movie.	เขาเล่นเป็นราชาชั่วร้ายในหนัง
+823	I drink milk every morning.	ฉันดื่มนมทุกเช้า
+824	What's your favorite sport?	กีฬาที่คุณชอบที่สุดคืออะไร
+825	I admit I was wrong.	ฉันยอมรับว่าฉันผิด
+826	Apparently, the store is closed today.	ได้ยินว่าวันนี้ร้านปิด
+827	We had a long conversation.	เราคุยกันนานมาก
+828	Obviously, I'm not ready yet.	เห็นได้ชัดว่าฉันยังไม่พร้อม
+829	Uh-oh, I think we're lost.	อุ๊ย ฉันว่าเราหลงทางแล้ว
+830	Take a jacket. It's cold.	เอาแจ็กเก็ตไปด้วยนะ อากาศหนาว
+831	Please turn off your phone during the movie.	กรุณาปิดโทรศัพท์ระหว่างชมภาพยนตร์
+832	We don't accept credit cards.	เราไม่รับบัตรเครดิต
+833	That was a dumb idea.	นั่นเป็นความคิดที่โง่มาก
+834	Can you wait a bit?	รอสักครู่ได้ไหม
+835	Please consider my offer.	ช่วยพิจารณาข้อเสนอของฉันด้วยนะ
+836	Don't mention it.	ไม่เป็นไร ไม่ต้องพูดถึง
+837	Please step aside.	กรุณาหลีกทางหน่อย
+838	I'll deal with it later.	เดี๋ยวฉันค่อยจัดการทีหลัง
+839	I'm so hungry.	ฉันหิวมาก
+840	It's a difficult situation.	เป็นสถานการณ์ที่ยากลำบาก
+841	This road leads to the beach.	ถนนสายนี้ไปทะเล
+842	The kids have lunch at twelve.	เด็ก ๆ กินข้าวกลางวันตอนเที่ยง
+843	You look fantastic!	คุณดูดีมากเลย
+844	There's a hole in my sock.	ถุงเท้าของฉันมีรู
+845	It's two plus two.	สองบวกสอง
+846	I left a note on the fridge.	ฉันแปะโน้ตไว้ที่ตู้เย็น
+847	I have a math test tomorrow.	พรุ่งนี้ฉันมีสอบคณิตศาสตร์
+848	To be honest, I don't like it.	พูดตามตรงฉันไม่ชอบเลย
+849	He's my favorite character in the show.	เขาเป็นตัวละครที่ฉันชอบที่สุดในซีรีส์
+850	Holy cow, that's expensive!	โอ้โห แพงมาก
+851	I'd like to speak to the manager.	ขอคุยกับผู้จัดการหน่อยค่ะ
+852	I learned my lesson.	ฉันได้บทเรียนแล้ว
+853	Music is good for the soul.	ดนตรีดีต่อจิตใจ
+854	Nope, I don't think so.	ไม่ ฉันว่าไม่ใช่นะ
+855	It gets dark early in winter.	หน้าหนาวฟ้ามืดเร็ว
+856	Can you tell the difference?	คุณบอกความแตกต่างได้ไหม
+857	Would you like red wine or white?	รับไวน์แดงหรือไวน์ขาวดีคะ
+858	Drive carefully on this road.	ขับรถบนถนนเส้นนี้ระวัง ๆ นะ
+859	Calm down and take a deep breath.	ใจเย็น ๆ แล้วหายใจลึก ๆ
+860	Sorry, that's a personal question.	ขอโทษนะ นั่นเป็นคำถามส่วนตัว
+861	The kids laughed at the clown.	เด็ก ๆ หัวเราะตัวตลก
+862	My computer is really slow.	คอมพิวเตอร์ของฉันช้ามาก
+863	Have you ever ridden a horse?	คุณเคยขี่ม้าไหม
+864	Oh my gosh, you scared me!	ตายจริง คุณทำฉันตกใจ
+865	The mayor opened the new park.	นายกเทศมนตรีเปิดสวนสาธารณะแห่งใหม่
+866	Let's go inside. It's raining.	เข้าไปข้างในกันเถอะ ฝนตก
+867	She looks sexy in that dress.	เธอดูเซ็กซี่ในชุดนั้น
+868	Your shoes are dirty.	รองเท้าของคุณสกปรก
+869	Can you help me carry these bags?	ช่วยฉันถือกระเป๋าพวกนี้หน่อยได้ไหม
+870	My professor is very funny.	อาจารย์ของฉันตลกมาก
+871	I usually get up at seven.	ปกติฉันตื่นเจ็ดโมง
+872	Can I have a bottle of water?	ขอน้ำขวดหนึ่งได้ไหม
+873	I love pizza with extra cheese.	ฉันชอบพิซซ่าเพิ่มชีส
+874	We go to the beach every summer.	เราไปทะเลทุกหน้าร้อน
+875	Remind me to call my mom.	ช่วยเตือนให้ฉันโทรหาแม่ด้วยนะ
+876	I'll see you this afternoon.	เจอกันบ่ายนี้นะ
+877	I need to pee.	ฉันอยากฉี่
+878	The store is across the street.	ร้านอยู่ฝั่งตรงข้ามถนน
+879	Please don't be angry with me.	อย่าโกรธฉันเลยนะ
+880	He's a nice fella.	เขาเป็นหนุ่มที่นิสัยดี
+881	Have you seen that film?	คุณเคยดูหนังเรื่องนั้นไหม
+882	I can't reach the top shelf.	ฉันเอื้อมไม่ถึงชั้นบนสุด
+883	I'm going to take a shower.	ฉันจะไปอาบน้ำ
+884	Would you like a cup of tea?	รับชาสักถ้วยไหม
+885	You should talk to a lawyer.	คุณควรปรึกษาทนายความ
+886	I bought a new camera.	ฉันซื้อกล้องตัวใหม่
+887	I have a pain in my back.	ฉันปวดหลัง
+888	Hurry up, we're late!	เร็วเข้า เราสายแล้ว
+889	Your keys are on my desk.	กุญแจของคุณอยู่บนโต๊ะทำงานของฉัน
+890	There's a monster under my bed!	มีสัตว์ประหลาดอยู่ใต้เตียงของฉัน
+891	I'll certainly think about it.	ฉันจะลองคิดดูแน่นอน
+892	The cop gave me a ticket.	ตำรวจออกใบสั่งให้ฉัน
+893	Can I pay with a credit card?	จ่ายด้วยบัตรเครดิตได้ไหม
+894	I need to prepare for the meeting.	ฉันต้องเตรียมตัวสำหรับการประชุม
+895	I can't find my keys anywhere.	ฉันหากุญแจไม่เจอเลย
+896	What did you have for breakfast?	มื้อเช้าคุณกินอะไร
+897	That bastard stole my bike!	ไอ้เลวนั่นขโมยจักรยานของฉัน
+898	Where are my damn keys?	กุญแจบ้าของฉันไปไหนแล้ว
+899	They go to church every Sunday.	พวกเขาไปโบสถ์ทุกวันอาทิตย์
+900	The company wants to hire more people.	บริษัทอยากจ้างคนเพิ่ม
+901	It was a hard decision.	เป็นการตัดสินใจที่ยาก
+902	Excuse me, Miss.	ขอโทษนะครับคุณผู้หญิง
+903	The farmer has three pigs.	ชาวนามีหมูสามตัว
+904	Don't be a loser.	อย่าเป็นคนขี้แพ้สิ
+905	This robot can clean the floor.	หุ่นยนต์ตัวนี้ทำความสะอาดพื้นได้
+906	Take a deep breath.	หายใจเข้าลึก ๆ
+907	Let's go for a walk in the park.	ไปเดินเล่นในสวนกันเถอะ
+908	I love dark chocolate.	ฉันชอบดาร์กช็อกโกแลต
+909	The service here is great.	บริการที่นี่ดีมาก
+910	Her grandfather was a Jew from Poland.	ปู่ของเธอเป็นชาวยิวจากโปแลนด์
+911	Do you have any tape?	มีเทปกาวไหม
+912	Mom is cooking in the kitchen.	แม่กำลังทำอาหารอยู่ในครัว
+913	I'll meet you at half past six.	เจอกันตอนหกโมงครึ่งนะ
+914	I need to get rid of these old clothes.	ฉันต้องจัดการกับเสื้อผ้าเก่าพวกนี้
+915	Grandpa tells the best stories.	คุณปู่เล่าเรื่องสนุกที่สุด
+916	You're my hero!	คุณคือฮีโร่ของฉัน
+917	Nice shot!	ยิงสวย
+918	This is a nice spot for a picnic.	ที่นี่เป็นมุมปิกนิกที่ดีนะ
+919	My folks live in the countryside.	พ่อแม่ของฉันอยู่ต่างจังหวัด
+920	Don't yell at me!	อย่าตะคอกใส่ฉัน
+921	I feel awful.	ฉันรู้สึกแย่มาก
+922	This is my favorite scene in the movie.	นี่เป็นฉากที่ฉันชอบที่สุดในหนัง
+923	Can you show me a magic trick?	โชว์มายากลให้ดูหน่อยได้ไหม
+924	Don't be an asshole.	อย่าทำตัวน่ารังเกียจนักเลย
+925	That's not the issue.	นั่นไม่ใช่ประเด็น
+926	What a lovely day!	วันนี้อากาศดีจัง
+927	We visit my grandparents every summer.	เราไปเยี่ยมปู่ย่าตายายทุกหน้าร้อน
+928	It's an honor to meet you.	เป็นเกียรติที่ได้พบคุณ
+929	Is this towel clean?	ผ้าเช็ดตัวผืนนี้สะอาดไหม
+930	Wait a second.	รอแป๊บหนึ่ง
+931	He's dating a cute chick from work.	เขากำลังเดตกับสาวน่ารักที่ทำงาน
+932	What costume are you wearing for Halloween?	ฮาโลวีนนี้จะแต่งชุดอะไร
+933	Thank God it's Friday!	ขอบคุณพระเจ้า วันศุกร์แล้ว
+934	The bathroom is down the hall.	ห้องน้ำอยู่สุดทางเดิน
+935	Ms. Lee is our new manager.	คุณลีเป็นผู้จัดการคนใหม่ของเรา
+936	That bag is fake.	กระเป๋าใบนั้นเป็นของปลอม
+937	Please forgive me.	โปรดยกโทษให้ฉันด้วย
+938	I got a good grade in English.	ฉันได้เกรดภาษาอังกฤษดี
+939	It takes fifteen minutes to get there.	ใช้เวลาไปถึงที่นั่นสิบห้านาที
+940	You ought to see a doctor.	คุณควรไปหาหมอนะ
+941	Never cheat on a test.	ห้ามโกงข้อสอบเด็ดขาด
+942	Do you like Chinese food?	คุณชอบอาหารจีนไหม
+943	Oh crap, I'm late again.	ซวยแล้ว ฉันสายอีกแล้ว
+944	She wants to create her own app.	เธออยากสร้างแอปของตัวเอง
+945	This sofa is really comfortable.	โซฟาตัวนี้นั่งสบายมาก
+946	We stayed at a nice hotel.	เราพักที่โรงแรมดี ๆ
+947	I read it in a magazine.	ฉันอ่านเจอในนิตยสาร
+948	Let's settle this tomorrow.	ไว้ค่อยตกลงเรื่องนี้กันพรุ่งนี้
+949	I had a car accident last year.	ปีที่แล้วฉันประสบอุบัติเหตุทางรถยนต์
+950	The movie has some jokes about boobs.	หนังเรื่องนี้มีมุกเกี่ยวกับหน้าอกอยู่บ้าง
+951	That's an excellent idea.	เป็นความคิดที่ยอดเยี่ยม
+952	Our neighbor has a big dog.	เพื่อนบ้านของเรามีหมาตัวใหญ่
+953	The train leaves at seven.	รถไฟออกตอนเจ็ดโมง
+954	Write it on the board.	เขียนไว้บนกระดานนะ
+955	I'll pop over to see you later.	เดี๋ยวฉันจะแวะไปหาคุณนะ
+956	Keep your spirits up!	อย่าเพิ่งท้อนะ
+957	The cow is eating grass.	วัวกำลังกินหญ้า
+958	That's the tallest building in the city.	นั่นคือตึกที่สูงที่สุดในเมือง
+959	She whispered in my ear.	เธอกระซิบข้างหูฉัน
+960	There's a giant spider on the wall!	มีแมงมุมยักษ์อยู่บนผนัง
+961	That's an ugly sweater.	เสื้อกันหนาวตัวนั้นน่าเกลียดจัง
+962	The kids left their toys everywhere.	เด็ก ๆ ทิ้งของเล่นไว้เกลื่อนไปหมด
+963	Our flight was canceled.	เที่ยวบินของเราถูกยกเลิก
+964	The Internet is really slow today.	วันนี้เน็ตช้ามาก
+965	That's strange.	แปลกจัง
+966	My aunt is a nurse.	ป้าของฉันเป็นพยาบาล
+967	We spent a week on a small island.	เราใช้เวลาหนึ่งสัปดาห์บนเกาะเล็ก ๆ
+968	Do you have an extra pen?	มีปากกาเกินมาสักด้ามไหม
+969	These jeans don't fit me anymore.	กางเกงยีนส์ตัวนี้ใส่ไม่ได้แล้ว
+970	He threw a rock into the river.	เขาขว้างก้อนหินลงไปในแม่น้ำ
+971	Watch your step.	ระวังก้าวเดินนะ
+972	I love action movies.	ฉันชอบหนังแอ็กชัน
+973	Can we have the bill, please?	ขอเช็กบิลด้วยค่ะ
+974	The kids are playing in the field.	เด็ก ๆ เล่นอยู่ในทุ่ง
+975	Give me a kiss.	หอมแก้มฉันหน่อย
+976	I bought some fresh vegetables.	ฉันซื้อผักสดมา
+977	What level are you on in the game?	คุณเล่นเกมถึงด่านไหนแล้ว
+978	How much does it cost?	ราคาเท่าไร
+979	Do you have this in a bigger size?	มีไซซ์ใหญ่กว่านี้ไหม
+980	What's your cell number?	เบอร์มือถือของคุณคืออะไร
+981	Breakfast is served from seven to ten.	มีบริการอาหารเช้าตั้งแต่เจ็ดโมงถึงสิบโมง
+982	Shake the bottle before you open it.	เขย่าขวดก่อนเปิด
+983	I have a stiff neck.	ฉันคอเคล็ด
+984	I'll have a bowl of noodles.	ขอก๋วยเตี๋ยวชามหนึ่ง
+985	Everything is under control.	ทุกอย่างอยู่ในการควบคุม
+986	The music is too loud.	เพลงดังเกินไป
+987	Our apartment has two bedrooms.	อพาร์ตเมนต์ของเรามีสองห้องนอน
+988	Can I pay by check?	จ่ายด้วยเช็คได้ไหม
+989	This cake tastes like heaven.	เค้กนี้อร่อยราวกับสวรรค์
+990	You have the right to stay silent.	คุณมีสิทธิ์ที่จะไม่พูด
+991	I hate the commercials on TV.	ฉันเกลียดโฆษณาในทีวี
+992	Can you draw a cat?	คุณวาดรูปแมวได้ไหม
+993	We have guests coming for dinner.	เรามีแขกจะมากินข้าวเย็น
+994	That's insane!	บ้าไปแล้ว
+995	Don't be afraid to fail.	อย่ากลัวความล้มเหลว
+996	I love to cook for my friends.	ฉันชอบทำอาหารให้เพื่อน ๆ กิน
+997	It was a pleasure to meet you.	ยินดีที่ได้รู้จักนะ
+998	He drives a big truck.	เขาขับรถบรรทุกคันใหญ่
+999	I'm interested in science.	ฉันสนใจวิทยาศาสตร์
+1000	Be careful! The floor is wet.	ระวังนะ พื้นเปียก

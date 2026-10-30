@@ -2,8 +2,25 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Permissions-Policy: camera=(), geolocation=(), payment=()
 
 /project
   X-Frame-Options: DENY
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+
+/
+  Permissions-Policy: microphone=()
+
+/project
+  Permissions-Policy: microphone=()
+
+/english
+  Permissions-Policy: microphone=(self)
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://api.dictionaryapi.dev; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+
+/assets/english/words.json
+  Cache-Control: public, max-age=604800
+
+/assets/english/pron.txt
+  Cache-Control: public, max-age=604800

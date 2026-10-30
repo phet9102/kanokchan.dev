@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English cards · kanokchan.dev</title>
+<meta name="description" content="สุ่มการ์ดคำศัพท์ภาษาอังกฤษ 3D จาก 5,000 คำที่คนอเมริกันพูดบ่อยที่สุด พลิกดูรูปคำ ฟังเสียง แล้วปัดว่ารู้แล้วหรือยัง">
+<meta name="theme-color" content="#121640">
+<link rel="canonical" href="https://kanokchan.pages.dev/english">
+<meta property="og:title" content="English cards · kanokchan.dev">
+<meta property="og:description" content="ฝึกศัพท์ 5,000 คำที่ใช้พูดจริง ด้วยการ์ด 3D สุ่มทีละใบ">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='10' y='4' width='40' height='56' rx='8' fill='%23121640' stroke='%235ee6ff' stroke-width='4' transform='rotate(8 30 32)'/%3E%3Ctext x='31' y='42' text-anchor='middle' font-family='Georgia' font-weight='700' font-size='26' fill='%23fff'%3EAa%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/english/english.css">
+<script src="/assets/english/speech-coach.js" defer></script>
+<script src="/assets/english/english.js" defer></script>
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="home" href="/">kanokchan.dev</a>
+  <div class="score" id="score" aria-live="polite">
+    <span class="ring" id="ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5"/><circle id="ring-fill" cx="18" cy="18" r="15.5"/></svg></span>
+    <span><b id="known-n">0</b> รู้แล้ว <small>จาก <span id="pool-n">0</span> คำในชุดนี้</small></span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>5,000 คำที่คนอเมริกันพูดกันจริง</h1>
+    <p>สุ่มการ์ดทีละใบ แตะเพื่อพลิกดูรูปคำและฟังเสียง แล้วปัดขวาถ้ารู้แล้ว ปัดซ้ายถ้ายังต้องฝึก — คำที่ยังไม่รู้จะวนกลับมาบ่อยขึ้น</p>
+  </section>
+
+  <section class="table" aria-label="การ์ดคำศัพท์">
+    <div class="deck" id="deck">
+      <div class="ghost g2" aria-hidden="true"></div>
+      <div class="ghost g1" aria-hidden="true"></div>
+      <!-- the live card is rendered here by english.js -->
+    </div>
+    <p class="hint" id="hint">แตะการ์ดเพื่อพลิก · ปัดซ้าย/ขวา หรือกด ← →</p>
+
+    <div class="actions">
+      <button class="act no" id="btn-no" type="button" title="ยังไม่รู้ (←)"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg><span>ยังต้องฝึก</span></button>
+      <button class="act flip" id="btn-flip" type="button" title="พลิก (Space)"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 9M20 4v5h-5M20 12a8 8 0 0 1-13.7 5.6L4 15M4 20v-5h5"/></svg><span>พลิก</span></button>
+      <button class="act say" id="btn-mic" type="button" title="ฝึกออกเสียงคำนี้"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg><span>ฝึกพูด</span></button>
+      <button class="act yes" id="btn-yes" type="button" title="รู้แล้ว (→)"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>รู้แล้ว</span></button>
+    </div>
+    <button class="undo" id="btn-undo" type="button" hidden>↶ ย้อนการ์ดเมื่อกี้</button>
+  </section>
+
+  <section class="settings" aria-label="ตั้งค่าการสุ่ม">
+    <div class="field">
+      <span class="lbl">โหมด</span>
+      <div class="seg" id="mode" role="radiogroup" aria-label="โหมด">
+        <button type="button" role="radio" data-v="see" aria-checked="true">ดูคำ</button>
+        <button type="button" role="radio" data-v="listen" aria-checked="false">ฟังแล้วสะกด</button>
+        <button type="button" role="radio" data-v="review" aria-checked="false">ทบทวนคำที่ยังไม่รู้ <b id="learn-n">0</b></button>
+      </div>
+    </div>
+    <div class="field">
+      <label class="lbl" for="range">สุ่มจากคำยอดนิยมอันดับ 1 – <b id="range-v">1000</b></label>
+      <input type="range" id="range" min="0" max="7" step="1" value="3">
+      <div class="ticks" aria-hidden="true"><span>100</span><span>250</span><span>500</span><span>1k</span><span>1.5k</span><span>2k</span><span>3k</span><span>5k</span></div>
+    </div>
+    <div class="field">
+      <span class="lbl">ชนิดของคำ</span>
+      <div class="chips" id="pos"></div>
+    </div>
+    <label class="check"><input type="checkbox" id="hide-known" checked> ไม่ต้องสุ่มคำที่รู้แล้ว</label>
+    <div class="tools">
+      <button type="button" class="link" id="btn-reset">ล้างความคืบหน้า</button>
+    </div>
+  </section>
+</main>
+
+<!-- pronunciation coach: say the word, see which sounds were right -->
+<div class="coach" id="coach" hidden>
+  <div class="coach-in" role="dialog" aria-modal="true" aria-labelledby="c-word">
+    <button class="c-x" id="c-x" type="button" aria-label="ปิด">×</button>
+    <div class="c-head">
+      <div><b id="c-word" class="c-word">word</b><span id="c-ipa" class="c-ipa"></span></div>
+      <div class="c-tools">
+        <button type="button" id="c-listen" class="c-btn">🔊 ฟังเสียงที่ถูก</button>
+        <button type="button" id="c-slow" class="c-btn">🐢 ช้า ๆ</button>
+      </div>
+    </div>
+    <div class="phones" id="c-phones" aria-label="เสียงในคำนี้"></div>
+    <div class="c-microw">
+      <button type="button" class="c-mic" id="c-mic"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg><span id="c-mic-t">กดแล้วพูด</span></button>
+      <p class="c-status" id="c-status" aria-live="polite"></p>
+    </div>
+    <div class="c-result" id="c-result" hidden>
+      <div class="c-score"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18"/><circle id="c-ring-fill" cx="20" cy="20" r="18"/></svg><b id="c-pct">0%</b></div>
+      <div class="c-detail">
+        <p id="c-heard" class="c-heard"></p>
+        <ul id="c-notes" class="c-notes"></ul>
+        <p id="c-best" class="c-best"></p>
+      </div>
+    </div>
+    <p class="c-note">ตรวจจากคำที่เบราว์เซอร์ฟังได้ แล้วเทียบทีละเสียงกับพจนานุกรมการออกเสียง CMU — เป็นคะแนนโดยประมาณ ใช้ได้บน Chrome, Edge และ Safari (ต้องต่ออินเทอร์เน็ต)</p>
+  </div>
+</div>
+
+<footer class="foot">
+  <p>รายการคำ: <a href="https://frequencylist.com" target="_blank" rel="noopener">Frequency List</a> โดย Fabien Snauwaert และ Guillaume Voisin — 5,000 คำแรกจากบทพูดซีรีส์อเมริกัน 12 เรื่อง (ราว 6.2 ล้านคำ) ครอบคลุม 96% ของภาษาพูด เผยแพร่ภายใต้ <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></p>
+  <p>เสียงอ่านเทียบกับ <a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener">CMU Pronouncing Dictionary</a> (© Carnegie Mellon University, <a href="/assets/english/CMUDICT-LICENSE.txt">สัญญาอนุญาต</a>) · ประโยคตัวอย่างอันดับ 1,001 ขึ้นไปจาก <a href="https://dictionaryapi.dev" target="_blank" rel="noopener">Free Dictionary API</a></p>
+  <p>ความคืบหน้าเก็บไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น · เสียงอ่านใช้เสียงของเครื่องคุณเอง</p>
+</footer>
+</body>
+</html>
